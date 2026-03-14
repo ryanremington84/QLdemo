@@ -52,10 +52,10 @@ export function HeroSection() {
                         </Link>
 
                         <Link
-                            href="/"
+                            href="/assessment"
                             className="px-8 py-4 rounded-xl glass backdrop-blur-md bg-slate-900/10 text-slate-800 text-sm font-medium hover:bg-slate-900/20 transition-all duration-300"
                         >
-                            Learn More
+                            Try our Assessment
                         </Link>
                     </div>
                 </div>

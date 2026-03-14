@@ -1,23 +1,26 @@
+export type MessageType = {
+    role: string;
+    content: string | ({
+        type: string;
+        text: string;
+        image_url?: string | undefined;
+    } | {
+        type: string;
+        image_url: {
+            url: string;
+        };
+        text?: string | undefined;
+    })[];
+}
+
 export type OpenRouterType = {
-    messages: {
-        role: string;
-        content: string | ({
-            type: string;
-            text: string;
-            image_url?: string | undefined;
-        } | {
-            type: string;
-            image_url: {
-                url: string;
-            };
-            text?: string | undefined;
-        })[];
-    }[],
+    messages: MessageType[],
     model: string
 
 }
 
 export async function OpenRouter({ config }: { config: OpenRouterType }) {
+
     const openRouterResponse = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -32,9 +35,23 @@ export async function OpenRouter({ config }: { config: OpenRouterType }) {
         })
     });
 
+    if (!openRouterResponse.ok) {
+        const err = await openRouterResponse.text();
+        throw new Error(`OpenRouter error: ${err}`);
+    }
+
     const data = await openRouterResponse.json();
+    console.log(data);
 
-    const extracted = data.choices?.[0]?.message?.content || "No text extracted.";
+    const content = data?.choices?.[0]?.message?.content;
 
-    return extracted
+    let extracted = "No text extracted.";
+
+    if (typeof content === "string") {
+        extracted = content;
+    } else if (Array.isArray(content)) {
+        extracted = content.map((c: any) => c.text || "").join("");
+    }
+
+    return extracted;
 }
