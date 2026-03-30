@@ -17,11 +17,12 @@ export function HeroSection() {
         return shuffled.slice(0, 3);
     }, []);
     return (
-        <div className="relative container mx-auto w-full min-h-screen pt-[120px] flex flex-col items-center justify-center gap-16 z-10">
+        <div className="w-full bg-linear-to-b from-white to-slate-200 pt-20 md:pt-[120px]">
+            <div className="relative container mx-auto w-full min-h-screen flex flex-col items-center justify-center gap-16 z-10">
             <IntelligentGridBackground />
             <div className="flex items-center justify-between w-full">
                 {/* Left Content */}
-                <div className="flex flex-col items-start justify-center text-left max-w-xl">
+                <div className="flex flex-col items-start justify-center text-center md:text-left max-w-xl p-6">
 
                     <p className="text-xs tracking-[0.25em] text-slate-400 mb-6">
                         FOR OPERATORS WHO HAVE OUTGROWN HOW THEY OPERATE
@@ -37,7 +38,7 @@ export function HeroSection() {
                     </p>
 
                     <p className="text-lg text-slate-500 mb-10 leading-relaxed">
-                        Your business should work as hard as you do.
+                        Eight coordinated AI agents. One governing intelligence layer. Built for businesses that have outgrown how they operate.
                     </p>
 
                     {/* CTA Buttons */}
@@ -61,7 +62,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Right Image + Floating Glass Notifications */}
-                <div className="relative flex items-center justify-center">
+                <div className="relative hidden md:flex items-center justify-center">
 
                     {/* Glow */}
                     <div className="absolute w-[750px] h-[450px] bg-slate-900/20 blur-3xl rounded-full"></div>
@@ -125,7 +126,7 @@ export function HeroSection() {
             </div>
 
             {/* Bottom Content */}
-            <div className="w-full grid grid-cols-3 gap-6">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
                 {randomPosts.map((item, index) => (
                     <motion.div
                         key={index}
@@ -157,6 +158,7 @@ export function HeroSection() {
                     </motion.div>
                 ))}
             </div>
+        </div>
         </div>
     )
 }

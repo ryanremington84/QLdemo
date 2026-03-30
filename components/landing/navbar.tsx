@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 
-export default function Navbar({isScrolled}:{isScrolled: boolean}) {
-  
+export default function Navbar({ isScrolled }: { isScrolled: boolean }) {
+
 
   return (
     <div
@@ -32,6 +32,7 @@ export default function Navbar({isScrolled}:{isScrolled: boolean}) {
             </Link>
           </div>
         </div>
+        <Link href={'/dashboard'} className="px-6 py-2 bg-linear-to-r from-blue-600 to-purple-600 rounded-full text-white font-medium text-[12px]">Check it out</Link>
       </div>
     </div>
   );

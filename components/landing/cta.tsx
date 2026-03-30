@@ -19,31 +19,45 @@ export default function CTA() {
                 >
 
                     {/* Heading */}
-                    <h2 className="text-5xl font-semibold leading-[1.1] bg-gradient-to-r from-slate-900 via-slate-700 to-slate-500 bg-clip-text text-transparent">
-                        Transform Your Business Into
-                        <br />
-                        An Intelligent Operating System
+                    <h2 className="text-3xl md:text-5xl font-semibold leading-[1.1] bg-linear-to-r from-slate-900 via-slate-700 to-slate-500 bg-clip-text text-transparent">
+                        See where your operations stand before anything else.
                     </h2>
 
                     {/* Subtext */}
-                    <p className="text-slate-600 mt-6 text-lg max-w-2xl mx-auto">
-                        See how Quanton OS deploys coordinated AI agents across growth,
-                        operations, and strategy to automate the infrastructure of your business.
+                    <p className="text-slate-600 mt-6 text-md md:text-lg max-w-2xl mx-auto">
+                        Our assessment identifies key opportunities and quantifies potential impact
+                        before any commitment.
                     </p>
 
-                    {/* Button */}
-                    <div className="mt-10 flex justify-center">
+                    {/* Buttons */}
+                    <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
                         <Link
-                            href="https://calendly.com/quantonlabs/30min"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group flex items-center gap-3 px-8 py-4 rounded-xl
-              bg-slate-900 text-white font-medium text-lg
+                            href="/assessment"
+                            className="group flex items-center justify-center gap-3 px-6 py-4 rounded-xl
+              bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium
               shadow-lg hover:shadow-2xl
               hover:-translate-y-1
               transition-all duration-300"
                         >
-                            Request a Demo
+                            Assess Your Business
+
+                            <ArrowRight
+                                size={20}
+                                className="group-hover:translate-x-1 transition-transform"
+                            />
+                        </Link>
+
+                        <Link
+                            href="https://calendly.com/quantonlabs/30min"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex items-center justify-center gap-3 px-6 py-4 rounded-xl
+              bg-transparent border-2 border-slate-900 text-slate-900 font-medium
+              shadow-lg hover:shadow-2xl
+              hover:-translate-y-1
+              transition-all duration-300"
+                        >
+                            Book a Discovery Call
 
                             <ArrowRight
                                 size={20}

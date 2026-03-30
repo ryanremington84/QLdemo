@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,17 +13,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const productionUrl = "https://quantonlabs.com"; // ← replace with actual production domain
-const ogImage = "/images/assets/seo/ql_logo.png"; // 1200x630 image placed in /public
+const productionUrl = "https://quantonlabs.com";
+const ogImage = "/images/assets/seo/ql_logo.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL(productionUrl),
 
-  title: "Quanton Labs | AI-Powered Business Operating System for Growth-Stage Companies",
+  title: "AI Operating System for Business | Quanton Labs",
 
   description:
-    "Quanton OS integrates strategy, automation, and intelligence into a single governed architecture. Built for owner-led businesses generating $1M-$20M that need an operating system, not more tools.",
-
+    "Quanton OS deploys eight coordinated AI agents on your business. One governing intelligence layer connects every function, integrates with your existing systems, and gives leadership real-time visibility. Built for businesses generating $1M to $20M annually.",
+  keywords: "AI operating system for business, AI agents for business operations, governed AI system for growth-stage companies, business AI infrastructure",
   alternates: {
     canonical: productionUrl,
   },
@@ -63,6 +64,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CRKZ7L7PS0"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CRKZ7L7PS0');
+          `}
+        </Script>
         {children}
       </body>
     </html>

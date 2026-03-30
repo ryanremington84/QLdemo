@@ -54,7 +54,7 @@ export default function Explainer() {
 
           <div className="relative glass rounded-2xl backdrop-blur-xl bg-white/40 border border-white/40 shadow-2xl p-3">
 
-            <div className="relative w-[900px] max-w-full aspect-video overflow-hidden rounded-xl bg-slate-900">
+            <div className="relative w-[360px] md:w-[900px] max-w-full aspect-video overflow-hidden rounded-xl bg-slate-900">
 
               {/* Video */}
               <video

@@ -67,11 +67,11 @@ export default function Footer() {
               </h3>
 
               <div className="flex flex-col gap-3 text-sm text-slate-600">
-                <Link href="#" className="hover:text-slate-900 transition">
+                <Link href="#what-gets-deployed"className="hover:text-slate-900 transition">
                   Solutions
                 </Link>
 
-                <Link href="#" className="hover:text-slate-900 transition">
+                <Link href="#insights" className="hover:text-slate-900 transition">
                   Resources
                 </Link>
 
