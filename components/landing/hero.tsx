@@ -44,19 +44,19 @@ export function HeroSection() {
                     {/* CTA Buttons */}
                     <div className="flex items-center gap-6">
                         <Link
-                            href="https://calendly.com/quantonlabs/30min"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-8 py-4 rounded-xl bg-slate-900 text-white text-sm font-medium shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                            href="/assessment"
+                            className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                         >
-                            Request a Demo
+                            Assess Your Business
                         </Link>
 
                         <Link
-                            href="/assessment"
-                            className="px-8 py-4 rounded-xl glass backdrop-blur-md bg-slate-900/10 text-slate-800 text-sm font-medium hover:bg-slate-900/20 transition-all duration-300"
+                            href="https://calendly.com/quantonlabs/30min"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-4 rounded-xl glass backdrop-blur-md border border-slate-900 text-slate-900 text-sm font-medium hover:bg-slate-900/10 transition-all duration-300"
                         >
-                            Try our Assessment
+                            Book a Discovery Call
                         </Link>
                     </div>
                 </div>
