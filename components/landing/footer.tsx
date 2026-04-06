@@ -38,9 +38,7 @@ export default function Footer() {
               </div>
 
               <p className="text-slate-600 text-sm leading-relaxed">
-                Quanton OS deploys coordinated AI agents that automate
-                the growth, operations, and strategy infrastructure of
-                modern businesses.
+                Quanton OS deploys eight coordinated AI agents on Quanton Labs infrastructure, connecting directly to your existing business platforms and governed by a central intelligence layer.
               </p>
 
               {/* Socials */}
