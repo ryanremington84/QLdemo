@@ -61,9 +61,9 @@ function AgentCard({
   const Icon = agent.icon;
   return (
     <motion.div
-      initial={{ opacity: 0, y: 32 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      initial={{ opacity: 0, y: 48 }}
+animate={isInView ? { opacity: 1, y: 0 } : {}}
+transition={{ duration: 0.6, delay: index * 0.12 }}
     >
       <div
         style={{
