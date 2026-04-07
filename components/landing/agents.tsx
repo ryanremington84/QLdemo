@@ -154,7 +154,7 @@ function AgentCard({
 
 export default function Agents() {
   const gridRef = useRef(null);
-  const isInView = useInView(gridRef, { once: true, margin: "-80px" });
+  const isInView = useInView(gridRef, { once: true, margin: "0px" });
 
   return (
     <section
@@ -163,10 +163,10 @@ export default function Agents() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 48 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, delay: index * 0.12 }}
           className="text-center mb-16"
         >
           <p
