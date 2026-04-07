@@ -73,14 +73,14 @@ export default function Features() {
       `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <motion.div
-  key={os.name}
-  initial={{ opacity: 0, y: 56, scale: 0.97 }}
-  animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-  transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.15 }}
-  className="os-card"
-  style={{ borderTop: `3px solid ${os.borderColor}` }}
->
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
           <h2
             style={{
               background: "linear-gradient(to right, #2B60EB, #4655EB, #584DEB, #7341EA, #8B37EA)",
@@ -116,9 +116,9 @@ export default function Features() {
           {osSystems.map((os, index) => (
             <motion.div
               key={os.name}
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.55, ease: "easeOut", delay: index * 0.12 }}
+              initial={{ opacity: 0, y: 56, scale: 0.97 }}
+              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.15 }}
               className="os-card"
               style={{ borderTop: `3px solid ${os.borderColor}` }}
             >
@@ -170,6 +170,7 @@ export default function Features() {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
