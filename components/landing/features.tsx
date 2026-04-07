@@ -36,7 +36,7 @@ const osSystems = [
 
 export default function Features() {
   const gridRef = useRef(null);
-  const isInView = useInView(gridRef, { once: true, margin: "-80px" });
+  const isInView = useInView(gridRef, { once: true, margin: "0px" });
 
   return (
     <section style={{ backgroundColor: "#FFFFFF", padding: "120px 0" }}>
@@ -74,11 +74,13 @@ export default function Features() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+  key={os.name}
+  initial={{ opacity: 0, y: 56, scale: 0.97 }}
+  animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+  transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.15 }}
+  className="os-card"
+  style={{ borderTop: `3px solid ${os.borderColor}` }}
+>
         >
           <h2
             style={{
