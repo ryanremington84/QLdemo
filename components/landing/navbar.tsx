@@ -17,7 +17,7 @@ export default function Navbar({ isScrolled }: { isScrolled: boolean }) {
             <img src="/images/assets/seo/ql_text.png" className="w-30" />
           </Link>
 
-          <div className="flex items-center gap-4">
+          <div className="hidden items-center gap-4">
             <Link
               href="/"
               className="text-sm font-medium text-slate-600 hover:text-slate-900 duration-200"

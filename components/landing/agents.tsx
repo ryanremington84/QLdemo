@@ -44,10 +44,10 @@ export default function GoverningAgent() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="flex flex-wrap items-center justify-center gap-8"
         >
           {/* Marketing and Content Agent */}
-          <div className="glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
+          <div className="w-full md:w-md glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
             <h3 className="text-xl font-semibold text-slate-800 mb-2">Marketing and Content Agent</h3>
             <p className="text-sm font-medium text-slate-600 mb-4">Growth System</p>
             <p className="text-slate-600 leading-relaxed">
@@ -56,7 +56,7 @@ export default function GoverningAgent() {
           </div>
 
           {/* Sales Agent */}
-          <div className="glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
+          <div className="w-full md:w-md glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
             <h3 className="text-xl font-semibold text-slate-800 mb-2">Sales Agent</h3>
             <p className="text-sm font-medium text-slate-600 mb-4">Growth System</p>
             <p className="text-slate-600 leading-relaxed">
@@ -65,7 +65,7 @@ export default function GoverningAgent() {
           </div>
 
           {/* Customer Experience Agent */}
-          <div className="glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
+          <div className="w-full md:w-md glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
             <h3 className="text-xl font-semibold text-slate-800 mb-2">Customer Experience Agent</h3>
             <p className="text-sm font-medium text-slate-600 mb-4">Operations and Growth Systems</p>
             <p className="text-slate-600 leading-relaxed">
@@ -74,7 +74,7 @@ export default function GoverningAgent() {
           </div>
 
           {/* People and Team Agent */}
-          <div className="glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
+          <div className="w-full md:w-md glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
             <h3 className="text-xl font-semibold text-slate-800 mb-2">People and Team Agent</h3>
             <p className="text-sm font-medium text-slate-600 mb-4">Operations System</p>
             <p className="text-slate-600 leading-relaxed">
@@ -83,7 +83,7 @@ export default function GoverningAgent() {
           </div>
 
           {/* Operations Agent */}
-          <div className="glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
+          <div className="w-full md:w-md glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
             <h3 className="text-xl font-semibold text-slate-800 mb-2">Operations Agent</h3>
             <p className="text-sm font-medium text-slate-600 mb-4">Operations and Platform Systems</p>
             <p className="text-slate-600 leading-relaxed">
@@ -92,7 +92,7 @@ export default function GoverningAgent() {
           </div>
 
           {/* Inventory and Supply Chain Agent */}
-          <div className="glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
+          <div className="w-full md:w-md glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
             <h3 className="text-xl font-semibold text-slate-800 mb-2">Inventory and Supply Chain Agent</h3>
             <p className="text-sm font-medium text-slate-600 mb-4">Operations System</p>
             <p className="text-slate-600 leading-relaxed">
@@ -101,7 +101,7 @@ export default function GoverningAgent() {
           </div>
 
           {/* Finance Agent */}
-          <div className="glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
+          <div className="w-full md:w-md glass rounded-2xl p-8 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl hover:bg-white/40 transition-all duration-300">
             <h3 className="text-xl font-semibold text-slate-800 mb-2">Finance Agent</h3>
             <p className="text-sm font-medium text-slate-600 mb-4">Operations System</p>
             <p className="text-slate-600 leading-relaxed">

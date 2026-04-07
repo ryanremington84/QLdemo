@@ -1,11 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import Productivity from "@/components/landing/productivity";
 import { HeroSection } from "@/components/landing/hero";
-import { features } from "@/db/features";
-import { ChevronRight } from "lucide-react";
 import Features from "@/components/landing/features";
 import Explainer from "@/components/landing/explainer";
 import CTA from "@/components/landing/cta";

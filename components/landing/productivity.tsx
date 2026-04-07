@@ -70,7 +70,7 @@ export default function GoverningAgent() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-16 text-center"
         >
-          <button className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors duration-200 shadow-lg hover:shadow-xl">
+          <button className="hidden items-center justify-center px-6 py-3 text-base font-medium rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors duration-200 shadow-lg hover:shadow-xl">
             Explore the Governing Agent
             <ChevronRight className="ml-2" size={20} />
           </button>
