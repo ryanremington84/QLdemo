@@ -83,7 +83,7 @@ export function HeroSection() {
                                 <div className="relative hidden md:flex items-center justify-center">
                                 
                                   {/* Glow */}
-                                            <div className="absolute w-[750px] h-[450px] bg-slate-900/20 blur-3xl rounded-full"></div>div>
+                                            <div className="absolute w-[750px] h-[450px] bg-slate-900/20 blur-3xl rounded-full"></div>
                                 
                                   {/* Floating Notifications */}
                                   {randomNotifications.map((item, index) => {
