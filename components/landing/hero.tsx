@@ -42,20 +42,20 @@ export function HeroSection() {
                                 
                                             <p className="text-xs tracking-[0.25em] text-slate-400 mb-6">
                                                           FOR OPERATORS WHO HAVE OUTGROWN HOW THEY OPERATE
-                                            </p>p>
+                                            </p>
                                 
                                             <h1 className="text-6xl leading-[1.1] font-semibold mb-6 bg-linear-to-r from-slate-900 via-slate-700 to-slate-500 bg-clip-text text-transparent">
                                                           The Architecture of Intelligent Business
-                                            </h1>h1>
+                                            </h1>
                                 
                                             <p className="text-lg text-slate-500 mb-4 leading-relaxed">
                                                           You built a business. Now the business runs you.
                                                           Quanton OS is the infrastructure that changes that.
-                                            </p>p>
+                                            </p>
                                 
                                             <p className="text-lg text-slate-500 mb-10 leading-relaxed">
                                                           Eight coordinated AI agents. One governing intelligence layer. Built for businesses that have outgrown how they operate.
-                                            </p>p>
+                                            </p>
                                 
                                   {/* CTA Buttons */}
                                             <div className="flex items-center gap-6">
@@ -65,7 +65,7 @@ export function HeroSection() {
                                                                             style={{ background: "linear-gradient(to right, #2B60EB, #8B37EA)", fontFamily: "Manrope, sans-serif" }}
                                                                           >
                                                                           Assess Your Business
-                                                          </Link>Link>
+                                                          </Link>
                                             
                                                           <Link
                                                                             href="https://calendly.com/quantonlabs/30min"
@@ -75,9 +75,9 @@ export function HeroSection() {
                                                                             style={{ border: "1px solid #2B60EB", color: "#2B60EB", background: "transparent", fontFamily: "Manrope, sans-serif" }}
                                                                           >
                                                                           Book a Discovery Call
-                                                          </Link>Link>
-                                            </div>div>
-                                </div>div>
+                                                          </Link>
+                                            </div>
+                                </div>
                       
                         {/* Right Image + Floating Glass Notifications */}
                                 <div className="relative hidden md:flex items-center justify-center">
@@ -131,11 +131,11 @@ export function HeroSection() {
                                                                   <div className="flex items-start gap-3 relative">
                                                                                       <div className="p-2 rounded-lg bg-slate-900/10">
                                                                                                             <Icon className="w-4 h-4 text-slate-500" />
-                                                                                        </div>div>
+                                                                                        </div>
                                                                                       <p className="text-xs text-slate-300 leading-snug">
                                                                                         {item.text}
-                                                                                        </p>p>
-                                                                  </div>div>
+                                                                                        </p>
+                                                                  </div>
                                                 </motion.div>motion.div>
                                               );
               })}
@@ -145,15 +145,15 @@ export function HeroSection() {
                                                             src="/images/mockups/3.png"
                                                             className="w-[750px] h-[450px] object-cover rounded-2xl shadow-[0_30px_80px_rgba(15,23,42,0.15)] border border-white/40"
                                                           />
-                                </div>div>
-                      </div>div>
+                                </div>
+                      </div>
               
                 {/* Bottom Blog Cards */}
                       <div id="insights" className="w-full">
                                 <div className="px-6 mb-4">
                                             <p className="text-xs font-semibold tracking-[0.08em] uppercase mb-3" style={{ color: "#4655EB", fontFamily: "Manrope, sans-serif" }}>INSIGHTS</p>p>
                                             <h2 className="text-2xl font-bold" style={{ color: "#1F2937", fontFamily: "Manrope, sans-serif" }}>Thinking on Business Systems and Operational Architecture</h2>h2>
-                                </div>div>
+                                </div>
                                 <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
                                   {[
                 {
@@ -205,17 +205,17 @@ export function HeroSection() {
                                                             <div>
                                                                               <p className="text-xs font-semibold tracking-[0.08em] uppercase mb-3" style={{ color: "#4655EB", fontFamily: "Manrope, sans-serif", letterSpacing: "0.08em" }}>
                                                                                 {card.category}
-                                                                              </p>p>
+                                                                              </p>
                                                                               <h2 className="font-bold text-lg mb-2 line-clamp-2" style={{ color: "#1F2937", fontFamily: "Manrope, sans-serif", fontSize: "18px" }}>
                                                                                 {card.title}
-                                                                              </h2>h2>
+                                                                              </h2>
                                                                               <p className="text-sm leading-relaxed mb-3" style={{ color: "#6B7280", fontFamily: "Manrope, sans-serif", fontSize: "14px" }}>
                                                                                 {card.description}
-                                                                              </p>p>
+                                                                              </p>
                                                                               <p className="text-xs" style={{ color: "#6B7280", fontFamily: "Manrope, sans-serif", fontSize: "12px" }}>
                                                                                 {card.readTime}
-                                                                              </p>p>
-                                                            </div>div>
+                                                                              </p>
+                                                            </div>
                                                             <div className="mt-4">
                                                                               <Link
                                                                                                     href={card.href}
@@ -225,13 +225,13 @@ export function HeroSection() {
                                                                                                     onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = "#2B60EB"; }}
                                                                                                   >
                                                                                                   Read article →
-                                                                              </Link>Link>
-                                                            </div>div>
+                                                                              </Link>
+                                                            </div>
                                             </motion.div>motion.div>
                                           ))}
-                                </div>div>
-                      </div>div>
-              </div>div>
-        </div>div>
+                                </div>
+                      </div>
+              </div>
+        </div>
       )
 }</div>
