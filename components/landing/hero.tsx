@@ -37,7 +37,7 @@ export function HeroSection() {
 
   return (
     <div
-      className="w-full relative overflow-hidden pt-20 md:pt-[120px]"
+      className="w-full relative overflow-hidden pt-20 md:pt-[80px]"
       style={{
         backgroundImage: `
           radial-gradient(ellipse 80% 60% at 50% 0%, rgba(43, 96, 235, 0.06) 0%, transparent 60%),
@@ -57,7 +57,7 @@ export function HeroSection() {
         }}
       />
 
-      <div className="relative container mx-auto w-full min-h-screen flex flex-col items-center justify-center gap-16 z-10">
+      <div className="relative container mx-auto w-full min-h-[85vh] flex flex-col items-center justify-center gap-16 z-10">
         <IntelligentGridBackground />
 
         <div className="flex items-center justify-between w-full">
