@@ -536,7 +536,6 @@ export default function QuantonDashboard() {
   }, [sequenceRun]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // IntersectionObserver — track whether dashboard is in viewport
-  useEffect(() => {
     useEffect(() => {
     const el = dashboardRef.current;
     if (!el) return;
