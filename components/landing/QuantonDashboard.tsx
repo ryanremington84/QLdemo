@@ -533,7 +533,7 @@ export default function QuantonDashboard() {
       timers.forEach(clearTimeout);
       if (approvalTimerRef.current) clearTimeout(approvalTimerRef.current);
     };
-  }, [sequenceRun]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [sequenceRun, hasEntered]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // IntersectionObserver — track whether dashboard is in viewport
     useEffect(() => {
