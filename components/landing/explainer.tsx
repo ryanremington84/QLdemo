@@ -17,7 +17,7 @@ export default function Explainer() {
   };
 
   return (
-    <section className="relative w-full py-40 overflow-hidden">
+    <section id="insights" className="relative w-full py-40 overflow-hidden">
       <IntelligentGridBackground />
       
 

@@ -167,7 +167,131 @@ export function HeroSection() {
                     ))}
                 </div>
             </div>
+
+            {/* Floating login card */}
+            <div
+              style={{
+                borderRadius: "16px",
+                border: "1px solid rgba(43,96,235,0.15)",
+                boxShadow: "0 0 80px rgba(43,96,235,0.18)",
+                background: "rgba(255,255,255,0.97)",
+                padding: "32px 28px",
+                width: "320px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "16px",
+                fontFamily: "Manrope, sans-serif",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  color: "#6B7280",
+                  margin: 0,
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase" as const,
+                }}
+              >
+                Quanton OS
+              </p>
+              <p
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 700,
+                  color: "#1F2937",
+                  margin: 0,
+                }}
+              >
+                Sign in to your workspace
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                <label style={{ fontSize: "12px", fontWeight: 600, color: "#374151" }}>
+                  Email
+                </label>
+                <input
+                  type="text"
+                  readOnly
+                  value={emailText}
+                  placeholder="you@company.com"
+                  style={{
+                    border: "1px solid rgba(43,96,235,0.25)",
+                    borderRadius: "8px",
+                    padding: "10px 12px",
+                    fontSize: "14px",
+                    color: "#1F2937",
+                    fontFamily: "Manrope, sans-serif",
+                    outline: "none",
+                    background: "#F9FAFB",
+                  }}
+                />
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                <label style={{ fontSize: "12px", fontWeight: 600, color: "#374151" }}>
+                  Password
+                </label>
+                <input
+                  type="text"
+                  readOnly
+                  value={passwordText}
+                  placeholder="••••••••"
+                  style={{
+                    border: "1px solid rgba(43,96,235,0.25)",
+                    borderRadius: "8px",
+                    padding: "10px 12px",
+                    fontSize: "14px",
+                    color: "#1F2937",
+                    fontFamily: "Manrope, sans-serif",
+                    letterSpacing: "0.15em",
+                    outline: "none",
+                    background: "#F9FAFB",
+                  }}
+                />
+              </div>
+              <button
+                onClick={handleSignIn}
+                disabled={isAnimating}
+                style={{
+                  background: "linear-gradient(to right, #2B60EB, #4655EB, #584DEB, #7341EA, #8B37EA)",
+                  color: "white",
+                  fontFamily: "Manrope, sans-serif",
+                  fontWeight: 600,
+                  fontSize: "15px",
+                  padding: "12px 24px",
+                  borderRadius: "8px",
+                  border: "none",
+                  cursor: isAnimating ? "default" : "pointer",
+                  opacity: isAnimating ? 0.85 : 1,
+                  animation: buttonState === "signing" ? "pulse-opacity 0.5s ease-in-out infinite alternate" : "none",
+                }}
+              >
+                {buttonState === "signing" ? "Signing in..." : "Sign in to Quanton OS"}
+              </button>
+            </div>
+          </div>
         </div>
     )
 }
 
+      {/* Bottom fade */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "120px",
+          background: "linear-gradient(to bottom, transparent, #ffffff)",
+          pointerEvents: "none",
+          zIndex: 4,
+        }}
+      />
+      <style>{`
+        @keyframes pulse-opacity {
+          from { opacity: 1; }
+          to { opacity: 0.5; }
+        }
+      `}</style>
+    </div>
+  );
+}

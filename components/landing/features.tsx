@@ -1,200 +1,177 @@
-import { Workflow, TrendingUp, PenTool, BarChart3, AlertTriangle, Users, UserPlus, BookOpen, ClipboardList, LineChart, DollarSign, Boxes, Truck, Megaphone, FileSignature, UserCheck, Bell, PieChart, Brain, Calendar, Mail, Clock, Target, CheckCircle2, Gauge, Receipt, FileText, ShieldCheck, Settings, CreditCard, Scale, Package, Sparkles, Network, Activity, Map } from "lucide-react";
-import { motion } from "framer-motion";
+"use client";
 
-export const features = [
-  // Strategy — Intelligence
-  { title: "Unified Multi-Agent Orchestration", icon: Workflow },
-  { title: "Cross-Department Workflow Automation", icon: Network },
-  { title: "Autonomous Revenue Pipeline Management", icon: TrendingUp },
-  { title: "Intelligent Content Engine", icon: PenTool },
-  { title: "Executive KPI Command Center", icon: BarChart3 },
-  { title: "Exception & Risk Detection", icon: AlertTriangle },
-  { title: "Full Customer Lifecycle Management", icon: Users },
-  { title: "Automated Hiring Infrastructure", icon: UserPlus },
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
-  // Platform — Architecture
-  { title: "SOP & Knowledge Base Automation", icon: BookOpen },
-  { title: "Intelligent Task Delegation", icon: ClipboardList },
-  { title: "Predictive Revenue Forecasting", icon: LineChart },
-  { title: "Financial Execution Engine", icon: DollarSign },
-  { title: "Inventory & Demand Forecasting", icon: Boxes },
-  { title: "Supplier Coordination Layer", icon: Truck },
-  { title: "Brand Voice Governance", icon: Megaphone },
-  { title: "Proposal & Contract Generation", icon: FileSignature },
-
-  // Operations — Precision
-  { title: "Retention & Segmentation Intelligence", icon: UserCheck },
-  { title: "Escalation & Conflict Routing", icon: Bell },
-  { title: "Performance Attribution Analytics", icon: PieChart },
-  { title: "Leadership-Level Business Synthesis", icon: Brain },
-  { title: "Social Content Scheduling", icon: Calendar },
-  { title: "Email Campaign Automation", icon: Mail },
-  { title: "Competitive Monitoring", icon: Activity },
-  { title: "Editorial Calendar Management", icon: Clock },
-
-  // Growth — Momentum
-  { title: "Outbound Prospecting Engine", icon: Target },
-  { title: "Lead Qualification Logic", icon: CheckCircle2 },
-  { title: "Win/Loss Analysis", icon: Gauge },
-  { title: "Team Scheduling", icon: Users },
-  { title: "Performance Review Preparation", icon: ClipboardList },
-  { title: "Vendor Cost Analysis", icon: Receipt },
-  { title: "Meeting Intelligence Capture", icon: FileText },
-  { title: "Process Compliance Monitoring", icon: ShieldCheck },
+const osSystems = [
+  {
+    label: "INTELLIGENCE",
+    name: "Strategy — Intelligence",
+    borderColor: "#2B60EB",
+    description: "Defines business objectives, growth metrics, and strategic priorities. Establishes clarity between vision and execution through diagnostic analysis, KPI frameworks, and performance reviews.",
+    chips: ["Unified Multi-Agent Orchestration", "Cross-Department Wohrkflow Automation", "Autonomous Revenue Pipeline Management", "Intelligent Content Engine", "Executive KPI Command Center", "Exception & Risk Detection", "Full Customer Lifecycle Management", "Automated Hiring Infrastructure"],
+  },
+  {
+    label: "ARCHITECTURE",
+    name: "Platform — Architecture",
+    borderColor: "#4655EB",
+    description: "Builds the intelligent infrastructure that powers execution. Connects digital systems, brand assets, data pipelines, and intelligence layers into a unified operational foundation.",
+    chips: ["SOP & Knowledge Base Automation", "Intelligent Task Delegation", "Predictive Revenue Forecasting", "Financial Execution Engine", "Inventory & Demand Forecasting", "Supplier Coordination Layer", "Brand Voice Governance", "Proposal & Contract Generation"],
+  },
+  {
+    label: "PRECISION",
+    name: "Operations — Precision",
+    borderColor: "#7341EA",
+    description: "Governs day-to-day execution through client service delivery, internal compliance, and quality assurance. Ensures consistent performance and operational integrity across every agent domain.",
+    chips: ["Retention & Segmentation Intelligence", "Escalation & Conflict Routing", "Performance Attribution Analytics", "Leadership-Level Business Synthesis", "Social Content Scheduling", "Email Campaign Automation", "Competitive Monitoring", "Editorial Calendar Management"],
+  },
+  {
+    label: "MOMENTUM",
+    name: "Growth — Momentum",
+    borderColor: "#8B37EA",
+    description: "Drives revenue generation and market visibility through multichannel campaigns, conversion optimisation, and iterative testing. Translates strategy into measurable growth.",
+    chips: ["Outbound Prospecting Engine", "Lead Qualification Logic", "Win/Loss Analysis", "Team Scheduling", "Performance Review Preparation", "Vendor Cost Analysis", "Meeting Intelligence Capture", "Process Compliance Monitoring"],
+  },
 ];
 
 export default function Features() {
+  const gridRef = useRef(null);
+  const isInView = useInView(gridRef, { once: true, margin: "0px" });
+
   return (
-    <div className="container mx-auto px-4 py-20">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-4xl mx-auto text-center mb-16"
-      >
-        <h1 className="text-2xl md:text-5xl md:text-6xl font-semibold mb-6 bg-gradient-to-r from-slate-900 via-slate-700 to-slate-500 bg-clip-text text-transparent">
-          One Operating System. Four Coordinated Systems. Eight AI Agents.
-        </h1>
-        <p className="text-sm md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-          Quanton OS organises every business function into four interconnected operating systems. 
-          Eight AI agents operate within this structure, covering the complete operational surface area of a growth-stage business. 
-          Everything is coordinated. Nothing works in isolation.
-        </p>
-      </motion.div>
+    <section style={{ backgroundColor: "#FFFFFF", padding: "120px 0" }}>
+      <style>{`
+        .os-chip {
+          background: #F9FAFB;
+          border: 1px solid #E5E7EB;
+          border-radius: 20px;
+          padding: 6px 14px;
+          font-size: 13px;
+          color: #374151;
+          display: inline-flex;
+          font-family: Manrope, sans-serif;
+          transition: all 0.15s ease;
+          cursor: default;
+        }
+        .os-chip:hover {
+          background: rgba(43,96,235,0.08);
+          border-color: rgba(43,96,235,0.30);
+          color: #2B60EB;
+        }
+        .os-card {
+          background: #FFFFFF;
+          border: 1px solid #E5E7EB;
+          border-radius: 14px;
+          padding: 36px;
+          transition: all 0.25s ease;
+          cursor: default;
+        }
+        .os-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 40px rgba(43,96,235,0.10);
+        }
+      `}</style>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Strategy — Intelligence */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="glass rounded-2xl p-6 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-xl font-semibold text-slate-800 mb-4 flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-blue-500"></span>
-            Strategy — Intelligence
+          <h2
+            style={{
+              background: "linear-gradient(to right, #2B60EB, #4655EB, #584DEB, #7341EA, #8B37EA)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              fontFamily: "Manrope, sans-serif",
+              fontWeight: 800,
+              fontSize: "44px",
+              textAlign: "center",
+              marginBottom: "24px",
+              lineHeight: 1.15,
+            }}
+          >
+            One Operating System. Four Coordinated Systems. Eight AI Agents.
           </h2>
-          <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-            Defines business objectives, growth metrics, and strategic priorities. Establishes clarity between vision and execution through diagnostic analysis, KPI frameworks, and performance reviews.
+          <p
+            style={{
+              color: "#374151",
+              fontSize: "18px",
+              maxWidth: "640px",
+              margin: "0 auto",
+              lineHeight: 1.7,
+              fontFamily: "Manrope, sans-serif",
+              textAlign: "center",
+            }}
+          >
+            Quanton OS organises every business function into four interconnected operating systems. Eight AI agents operate within this structure, covering the complete operational surface area of a growth-stage business. Everything is coordinated. Nothing works in isolation.
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            {features.slice(0, 8).map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.03 }}
-                  className="group flex items-start gap-3 p-3 rounded-lg bg-white/50 backdrop-blur-md hover:bg-white/70 transition-colors duration-300"
-                >
-                  <div className="p-2 rounded-lg bg-white/50 backdrop-blur-md">
-                    <Icon size={16} className="text-slate-700 group-hover:text-slate-900 transition-colors duration-300" />
-                  </div>
-                  <span className="text-sm font-medium text-slate-800 leading-tight">{feature.title}</span>
-                </motion.div>
-              );
-            })}
-          </div>
         </motion.div>
 
-        {/* Platform — Architecture */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="glass rounded-2xl p-6 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl"
-        >
-          <h2 className="text-xl font-semibold text-slate-800 mb-4 flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-purple-500"></span>
-            Platform — Architecture
-          </h2>
-          <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-            Builds the intelligent infrastructure that powers execution. Connects digital systems, brand assets, data pipelines, and intelligence layers into a unified operational foundation.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            {features.slice(8, 16).map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.03 }}
-                  className="group flex items-start gap-3 p-3 rounded-lg bg-white/50 backdrop-blur-md hover:bg-white/70 transition-colors duration-300"
-                >
-                  <div className="p-2 rounded-lg bg-white/50 backdrop-blur-md">
-                    <Icon size={16} className="text-slate-700 group-hover:text-slate-900 transition-colors duration-300" />
-                  </div>
-                  <span className="text-sm font-medium text-slate-800 leading-tight">{feature.title}</span>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {osSystems.map((os, index) => (
+            <motion.div
+              key={os.name}
+              initial={{ opacity: 0, y: 56, scale: 0.97 }}
+              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.15 }}
+              className="os-card"
+              style={{ borderTop: `3px solid ${os.borderColor}` }}
+            >
+              <div
+                style={{
+                  background: "linear-gradient(to right, #2B60EB, #4655EB, #584DEB, #7341EA, #8B37EA)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                  fontFamily: "Manrope, sans-serif",
+                  fontWeight: 600,
+                  fontSize: "11px",
+                  letterSpacing: "0.1em",
+                  marginBottom: "8px",
+                  textTransform: "uppercase" as const,
+                }}
+              >
+                {os.label}
+              </div>
+              <h3
+                style={{
+                  color: "#1F2937",
+                  fontFamily: "Manrope, sans-serif",
+                  fontWeight: 700,
+                  fontSize: "20px",
+                  marginBottom: "12px",
+                }}
+              >
+                {os.name}
+              </h3>
+              <p
+                style={{
+                  color: "#374151",
+                  fontSize: "16px",
+                  lineHeight: 1.65,
+                  marginBottom: "24px",
+                  fontFamily: "Manrope, sans-serif",
+                }}
+              >
+                {os.description}
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+                {os.chips.map((chip) => (
+                  <span key={chip} className="os-chip">
+                    {chip}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
-        {/* Operations — Precision */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="glass rounded-2xl p-6 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl"
-        >
-          <h2 className="text-xl font-semibold text-slate-800 mb-4 flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-green-500"></span>
-            Operations — Precision
-          </h2>
-          <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-            Governs day-to-day execution through client service delivery, internal compliance, and quality assurance. Ensures consistent performance and operational integrity across every agent domain.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            {features.slice(16, 24).map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.03 }}
-                  className="group flex items-start gap-3 p-3 rounded-lg bg-white/50 backdrop-blur-md hover:bg-white/70 transition-colors duration-300"
-                >
-                  <div className="p-2 rounded-lg bg-white/50 backdrop-blur-md">
-                    <Icon size={16} className="text-slate-700 group-hover:text-slate-900 transition-colors duration-300" />
-                  </div>
-                  <span className="text-sm font-medium text-slate-800 leading-tight">{feature.title}</span>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
-
-        {/* Growth — Momentum */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="glass rounded-2xl p-6 backdrop-blur-xl bg-white/30 border border-white/40 shadow-xl"
-        >
-          <h2 className="text-xl font-semibold text-slate-800 mb-4 flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-orange-500"></span>
-            Growth — Momentum
-          </h2>
-          <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-            Drives revenue generation and market visibility through multichannel campaigns, conversion optimisation, and iterative testing. Translates strategy into measurable growth.
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            {features.slice(24, 32).map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.03 }}
-                  className="group flex items-start gap-3 p-3 rounded-lg bg-white/50 backdrop-blur-md hover:bg-white/70 transition-colors duration-300"
-                >
-                  <div className="p-2 rounded-lg bg-white/50 backdrop-blur-md">
-                    <Icon size={16} className="text-slate-700 group-hover:text-slate-900 transition-colors duration-300" />
-                  </div>
-                  <span className="text-sm font-medium text-slate-800 leading-tight">{feature.title}</span>
-                </motion.div>
-              );
-            })}
-          </div>
-        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
