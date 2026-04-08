@@ -588,7 +588,7 @@ export default function QuantonDashboard() {
       </p>
     </div>
 
-    {/* Section window wrapper */}
+   {/* Section window wrapper */}
     <div style={{
       background: "linear-gradient(135deg, #F8FAFF 0%, #EEF2FF 100%)",
       borderRadius: 24,
@@ -599,7 +599,7 @@ export default function QuantonDashboard() {
       margin: "0 auto",
     }}>
       {/* Window chrome dots */}
-    <div style={{
+      <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 16 }}>
       background: "linear-gradient(135deg, #F8FAFF 0%, #EEF2FF 100%)",
       borderRadius: 24,
       padding: "32px 24px",
