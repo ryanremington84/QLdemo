@@ -692,8 +692,8 @@ export default function QuantonDashboard() {
             <span className="ql-footer-dot" style={{ width: 6, height: 6, borderRadius: "50%", background: "#4ADE80" }} />
             All systems operational
           </span>
-        </div>
-
+     </div>
+      </div>
       </div>
       </div>
     </>
