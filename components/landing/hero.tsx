@@ -201,11 +201,8 @@ export function HeroSection() {
       } else if (e < moveDuration + hoverDuration) {
         ctx.globalAlpha = 1;
         drawModernCursor(ctx, endX, endY, 1);
-      } else if (
-        e 
-        moveDuration + hoverDuration + pressDuration
-      ) {
-        ctx.globalAlpha = 1;
+     } else if (e < moveDuration + hoverDuration + pressDuration) {
+          ctx.globalAlpha = 1;
         drawModernCursor(ctx, endX, endY, 0.84);
         if (!clickFired) {
           clickFired = true;
