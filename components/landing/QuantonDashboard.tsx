@@ -579,11 +579,12 @@ export default function QuantonDashboard() {
 
     {/* Bridge copy */}
     <div style={{ textAlign: "center", padding: "48px 24px 32px", fontFamily: "Manrope, sans-serif" }}>
-      <h2 style={{
-        fontSize: 14, fontWeight: 700, margin: "0 0 10px", letterSpacing: "0.12em",
-        textTransform: "uppercase",
+    <h2 style={{
+        fontSize: 48, fontWeight: 800, margin: "0 0 12px",
         background: "linear-gradient(to right, #2B60EB, #4655EB, #584DEB, #7341EA, #8B37EA)",
         WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
+        fontFamily: "Manrope, sans-serif",
+        lineHeight: 1.1,
       }}>
         Quanton OS
       </h2>
