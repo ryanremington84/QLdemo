@@ -302,21 +302,21 @@ export default function GoverningAgent() {
               <svg
                 width="100%"
                 height="100%"
-                viewBox="0 0 400 120"
-                preserveAspectRatio="none"
+                viewBox="0 0 420 120"
+                preserveAspectRatio="xMidYMid meet"
                 style={{ position: "absolute", top: 0, left: 0 }}
               >
                 {[0, 1, 2, 3, 4, 5, 6].map((i) => {
-                  const x = 28 + i * 52;
+                  const x = 30 + i * 60;
                   return (
                     <line
                       key={i}
-                      x1="200"
+                      x1="210"
                       y1="0"
                       x2={x}
-                      y2="110"
-                      stroke="rgba(43,96,235,0.30)"
-                      strokeWidth="1"
+                      y2="108"
+                      stroke="rgba(43,96,235,0.45)"
+                      strokeWidth="1.5"
                     />
                   );
                 })}
@@ -331,7 +331,7 @@ export default function GoverningAgent() {
                   right: 0,
                   display: "flex",
                   justifyContent: "space-between",
-                  padding: "0 4px",
+                  padding: "0 6px",
                 }}
               >
                 {agentIcons.map((IconComp, i) => (
@@ -341,14 +341,14 @@ export default function GoverningAgent() {
                       width: "48px",
                       height: "48px",
                       borderRadius: "12px",
-                      background: "rgba(255,255,255,0.06)",
-                      border: "1px solid rgba(255,255,255,0.12)",
+                      background: "rgba(255,255,255,0.08)",
+                      border: "1px solid rgba(255,255,255,0.18)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                     }}
                   >
-                    <IconComp size={18} color="rgba(255,255,255,0.70)" />
+                    <IconComp size={18} color="rgba(255,255,255,0.85)" />
                   </div>
                 ))}
               </div>
@@ -424,7 +424,7 @@ export default function GoverningAgent() {
                   color: "#FFFFFF",
                   fontFamily: "Manrope, sans-serif",
                   fontWeight: 700,
-                  fontSize: "32px",
+                  fontSize: "28px",
                   marginBottom: "16px",
                 }}
               >
@@ -481,63 +481,48 @@ export default function GoverningAgent() {
             }}
           >
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "180px", position: "relative" }}>
-              <div
-                style={{
-                  width: "220px",
-                  height: "140px",
-                  borderRadius: "16px",
-                  border: "1px dashed rgba(139,55,234,0.40)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  position: "relative",
-                }}
-              >
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "-10px",
-                    right: "12px",
-                    ...gradientText,
-                    fontFamily: "Manrope, sans-serif",
-                    fontSize: "12px",
-                    fontWeight: 600,
-                  }}
-                >
-                  Escalate
-                </div>
-                <div
-                  style={{
-                    width: "120px",
-                    height: "72px",
-                    borderRadius: "10px",
-                    border: "1px solid rgba(43,96,235,0.40)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    position: "relative",
-                  }}
-                >
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "-10px",
-                      left: "12px",
-                      ...gradientText,
-                      fontFamily: "Manrope, sans-serif",
-                      fontSize: "12px",
-                      fontWeight: 600,
-                    }}
-                  >
-                    Auto
-                  </div>
-                  <Cpu size={24} color="rgba(43,96,235,0.70)" />
-                </div>
-              </div>
+              <style>{`
+                @keyframes travel {
+                  0% { offset-distance: 0%; opacity: 0; }
+                  10% { opacity: 1; }
+                  90% { opacity: 1; }
+                  100% { offset-distance: 100%; opacity: 0; }
+                }
+              `}</style>
+              <svg width="280" height="160" viewBox="0 0 280 160" style={{ overflow: "visible" }}>
+                <line x1="20" y1="20" x2="140" y2="80" stroke="#2B60EB" strokeWidth="2" strokeOpacity="0.7" />
+                <line x1="140" y1="20" x2="140" y2="80" stroke="#584DEB" strokeWidth="2" strokeOpacity="0.7" />
+                <line x1="260" y1="20" x2="140" y2="80" stroke="#8B37EA" strokeWidth="2" strokeOpacity="0.7" />
+                <circle cx="20" cy="20" r="7" fill="#2B60EB" fillOpacity="0.8" />
+                <circle cx="140" cy="20" r="7" fill="#584DEB" fillOpacity="0.8" />
+                <circle cx="260" cy="20" r="7" fill="#8B37EA" fillOpacity="0.8" />
+                <circle cx="140" cy="80" r="10" fill="none" stroke="rgba(43,96,235,0.50)" strokeWidth="2" />
+                <circle cx="140" cy="80" r="10" fill="#2B60EB" fillOpacity="0.9" />
+                <line x1="140" y1="96" x2="140" y2="148" stroke="rgba(43,96,235,0.40)" strokeWidth="1" strokeDasharray="4 3" />
+                <rect x="108" y="148" width="64" height="18" rx="4" fill="rgba(43,96,235,0.15)" stroke="rgba(43,96,235,0.30)" strokeWidth="1" />
+              </svg>
+              <div style={{
+                position: "absolute",
+                width: "8px",
+                height: "8px",
+                borderRadius: "50%",
+                background: "linear-gradient(to right, #2B60EB, #8B37EA)",
+                offsetPath: "path('M 20 20 L 140 80')",
+                animation: "travel 1.8s ease-in-out infinite",
+              }} />
+              <div style={{
+                position: "absolute",
+                width: "8px",
+                height: "8px",
+                borderRadius: "50%",
+                background: "linear-gradient(to right, #584DEB, #2B60EB)",
+                offsetPath: "path('M 140 20 L 140 80')",
+                animation: "travel 1.8s ease-in-out infinite",
+                animationDelay: "0.9s",
+              }} />
             </div>
 
-            <div>
-              <div
+            <div
                 style={{
                   width: "64px",
                   height: "64px",
@@ -556,7 +541,7 @@ export default function GoverningAgent() {
                   color: "#FFFFFF",
                   fontFamily: "Manrope, sans-serif",
                   fontWeight: 700,
-                  fontSize: "32px",
+                  fontSize: "28px",
                   marginBottom: "16px",
                 }}
               >
@@ -617,7 +602,7 @@ export default function GoverningAgent() {
                   color: "#FFFFFF",
                   fontFamily: "Manrope, sans-serif",
                   fontWeight: 700,
-                  fontSize: "32px",
+                  fontSize: "28px",
                   marginBottom: "16px",
                 }}
               >
