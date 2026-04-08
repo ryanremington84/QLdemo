@@ -298,11 +298,11 @@ export default function GoverningAgent() {
             </div>
 
             {/* Connection lines SVG */}
-            <div style={{ position: "relative", width: "100%", height: "120px", marginBottom: "16px" }}>
+            <div style={{ position: "relative", width: "100%", height: "80px", marginBottom: "8px" }}>
               <svg
                 width="100%"
                 height="100%"
-                viewBox="0 0 420 120"
+                viewBox="0 0 420 80"
                 preserveAspectRatio="xMidYMid meet"
                 style={{ position: "absolute", top: 0, left: 0 }}
               >
@@ -314,7 +314,7 @@ export default function GoverningAgent() {
                       x1="210"
                       y1="0"
                       x2={x}
-                      y2="108"
+                      y2="72"
                       stroke="rgba(43,96,235,0.45)"
                       strokeWidth="1.5"
                     />
