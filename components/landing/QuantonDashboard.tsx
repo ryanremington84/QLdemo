@@ -457,6 +457,7 @@ export default function QuantonDashboard() {
   useEffect(() => { resetAndReplayRef.current = resetAndReplay; }, [resetAndReplay]);
 
   useEffect(() => {
+    if (!hasEntered) return;
     let cancelled = false;
     const key = sequenceKeyRef.current;
 
