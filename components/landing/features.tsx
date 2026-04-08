@@ -9,7 +9,7 @@ const osSystems = [
     name: "Strategy — Intelligence",
     borderColor: "#2B60EB",
     description: "Defines business objectives, growth metrics, and strategic priorities. Establishes clarity between vision and execution through diagnostic analysis, KPI frameworks, and performance reviews.",
-    chips: ["Unified Multi-Agent Orchestration", "Cross-Department Workflow Automation", "Autonomous Revenue Pipeline Management", "Intelligent Content Engine", "Executive KPI Command Center", "Exception & Risk Detection", "Full Customer Lifecycle Management", "Automated Hiring Infrastructure"],
+    chips: ["Unified Multi-Agent Orchestration", "Cross-Department Wohrkflow Automation", "Autonomous Revenue Pipeline Management", "Intelligent Content Engine", "Executive KPI Command Center", "Exception & Risk Detection", "Full Customer Lifecycle Management", "Automated Hiring Infrastructure"],
   },
   {
     label: "ARCHITECTURE",
@@ -89,7 +89,7 @@ export default function Features() {
               backgroundClip: "text",
               fontFamily: "Manrope, sans-serif",
               fontWeight: 800,
-              fontSize: "56px",
+              fontSize: "44px",
               textAlign: "center",
               marginBottom: "24px",
               lineHeight: 1.15,
@@ -152,7 +152,7 @@ export default function Features() {
               <p
                 style={{
                   color: "#374151",
-                  fontSize: "15px",
+                  fontSize: "16px",
                   lineHeight: 1.65,
                   marginBottom: "24px",
                   fontFamily: "Manrope, sans-serif",
