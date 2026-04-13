@@ -87,8 +87,7 @@ export default function RenderProfileStep({
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center px-4 py-12">
-      <div className="w-full max-w-xl">
+<div className="w-full flex flex-col items-center px-4 pt-8 pb-12">      <div className="w-full max-w-2xl">
 
         {/* Entry framing */}
         {currentPage === 0 && (
@@ -101,7 +100,7 @@ export default function RenderProfileStep({
             <h2 style={{ fontSize: 22, fontWeight: 600, color: '#1e293b', marginBottom: 10 }}>
               See where your operations stand.
             </h2>
-            <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.7, maxWidth: 460, margin: '0 auto' }}>
+            <p style={{ fontSize: 14, color: '#64748b', lineHeight: 1.7, maxWidth: 580, margin: '0 auto' }}>
               Answer four short questions, then complete a domain-by-domain review of how your key functions currently run. You will receive an Operational Readiness Report identifying your coverage gaps and the functions most likely to benefit from a coordinated AI operating system. Takes five to seven minutes.
             </p>
           </motion.div>
@@ -132,7 +131,7 @@ export default function RenderProfileStep({
             </div>
 
             {/* Header */}
-            <div style={{ padding: '24px 28px 0' }}>
+            <div style={{ padding: '16px 28px 0' }}>
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -173,7 +172,7 @@ export default function RenderProfileStep({
             </div>
 
             {/* Options */}
-            <div style={{ padding: '0 28px 20px' }}>
+            <div style={{ padding: '0 28px 12px' }}>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`options-${currentPage}`}
@@ -182,12 +181,10 @@ export default function RenderProfileStep({
                   exit={{ opacity: 0, x: -16 }}
                   transition={{ duration: 0.18 }}
                 >
-                  <div style={{
+                <div style={{
                     display: 'grid',
                     gridTemplateColumns: currentQuestion.options.length <= 4 ? '1fr' : '1fr 1fr',
-                    gap: 8,
-                    maxHeight: 340,
-                    overflowY: 'auto',
+                    gap: 6,
                   }}>
                     {currentQuestion.options.map(option => {
                       const isSelected = currentValue === option.key;
@@ -199,7 +196,7 @@ export default function RenderProfileStep({
                             display: 'flex',
                             alignItems: 'center',
                             gap: 10,
-                            padding: '11px 14px',
+                            padding: '8px 12px',
                             borderRadius: 10,
                             cursor: 'pointer',
                             border: isSelected ? '2px solid #2B60EB' : '1px solid #e2e8f0',
