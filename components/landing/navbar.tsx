@@ -20,8 +20,7 @@ export default function Navbar({ isScrolled }: { isScrolled: boolean }) {
 
       <div className="flex items-center justify-between container mx-auto h-full px-6">
         <div className="flex items-center gap-8">
-          <Link href="/" className="flex items-center">
-           <Image
+<Link href="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>           <Image
   src="/images/assets/QL_LOGO_WHITE_TRANSPARENT_v1_0_Feb2026.png"
   width={200}
   height={60}
