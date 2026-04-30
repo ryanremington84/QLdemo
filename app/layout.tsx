@@ -11,7 +11,6 @@ const manrope = Manrope({
 });
 
 const productionUrl = "https://quantonlabs.com";
-const ogImage = "/images/assets/seo/ql_logo.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL(productionUrl),
@@ -36,18 +35,12 @@ export const metadata: Metadata = {
       { rel: "mask-icon", url: "/images/assets/QL favicon transparent.svg" },
     ],
   },
-  openGraph: {
+openGraph: {
     title: "Quanton OS | AI Operating System for Growth-Stage Businesses",
     description:
       "Eight coordinated AI agents. One governing intelligence layer. Complete business infrastructure deployed on your existing systems without migration.",
     url: productionUrl,
     siteName: "Quanton Labs",
-    images: [
-      {
-        url: ogImage,
-        alt: "Quanton Labs - AI Operating System for Growth-Stage Businesses",
-      },
-    ],
     type: "website",
   },
   twitter: {
@@ -55,7 +48,6 @@ export const metadata: Metadata = {
     title: "Quanton OS | AI Operating System for Growth-Stage Businesses",
     description:
       "Quanton OS integrates strategy, automation, and intelligence into a single governed architecture. Built for owner-led businesses generating $1M-$20M that need an operating system, not more tools.",
-    images: [ogImage],
   },
   verification: {
     google: "VH98L-PLDlbMMnphknhdQWCZ1xoL8ClYr7wsxRLyUxo",
