@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import Providers from "./providers";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { SessionProvider } from "next-auth/react";
+import "@/lib/dns";
 
 const manrope = Manrope({
   variable: "--font-manrope",
