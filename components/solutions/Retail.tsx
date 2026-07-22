@@ -106,9 +106,9 @@ const agents = [
     name: "Finance Agent",
     tagline: "Sales tracked. Margins visible. Cash flow clear.",
     description:
-      "Revenue categorised by product, channel, and period automatically. Margin analysis surfaced without manual spreadsheet work. Supplier invoices processed and outstanding balances tracked. Financial reports produced on schedule. You see the financial performance of your store in real time without waiting for your accountant.",
+      "Revenue categorized by product, channel, and period automatically. Margin analysis surfaced without manual spreadsheet work. Supplier invoices processed and outstanding balances tracked. Financial reports produced on schedule. You see the financial performance of your store in real time without waiting for your accountant.",
     automations: [
-      "Revenue categorisation by product and channel",
+      "Revenue categorization by product and channel",
       "Margin analysis and low-margin product flagging",
       "Supplier invoice processing and tracking",
       "Cash flow and sales performance reporting",
@@ -135,7 +135,7 @@ const howItWorks = [
     title: "Discovery and Diagnostic",
     duration: "2 to 3 weeks",
     description:
-      "We audit your store across every operational domain — inventory management, purchasing decisions, customer retention, marketing execution, and financial visibility. The output is a Diagnostic Report that maps where margin is leaking, where repeat revenue is being lost, and exactly what infrastructure needs to be built. You own that report regardless of what you decide next.",
+      "We audit your store across every operational domain: inventory management, purchasing decisions, customer retention, marketing execution, and financial visibility. The output is a Diagnostic Report that maps where margin is leaking, where repeat revenue is being lost, and exactly what infrastructure needs to be built. You own that report regardless of what you decide next.",
     detail: "Fixed-fee engagement. No ongoing commitment at this stage.",
   },
   {
@@ -144,7 +144,7 @@ const howItWorks = [
     title: "Infrastructure Deployment",
     duration: "8 to 16 weeks",
     description:
-      "All eight agents are configured against your specific environment — your POS system, your e-commerce platform, your supplier network. The Governing Agent goes live. Your leadership dashboard is built. Inventory reorder workflows, abandoned cart sequences, post-purchase follow-ups, and marketing calendars are tested and governed. Your team is trained on what the system handles and what requires their decision.",
+      "All eight agents are configured against your specific environment: your POS system, your e-commerce platform, your supplier network. The Governing Agent goes live. Your leadership dashboard is built. Inventory reorder workflows, abandoned cart sequences, post-purchase follow-ups, and marketing calendars are tested and governed. Your team is trained on what the system handles and what requires their decision.",
     detail: "Fixed investment. You own all deployed infrastructure on completion.",
   },
   {
@@ -153,7 +153,7 @@ const howItWorks = [
     title: "Managed Services",
     duration: "Ongoing",
     description:
-      "Quanton Labs operates the system on your behalf. Agent hosting, API costs, system monitoring, workflow optimisation, and quarterly strategic reviews are all included. Your store keeps running at full operational capacity. We surface the exceptions that need your attention and handle everything that does not.",
+      "Quanton Labs operates the system on your behalf. Agent hosting, API costs, system monitoring, workflow optimization, and quarterly strategic reviews are all included. Your store keeps running at full operational capacity. We surface the exceptions that need your attention and handle everything that does not.",
     detail: "Fixed monthly retainer. Six-month minimum, then month-to-month.",
   },
 ];
@@ -168,23 +168,23 @@ const dashMetrics = [
 ];
 
 const dashInventory = [
-  { product: "Merino Wool Crew — Navy S/M", category: "Apparel", status: "on-track", stock: "94 units" },
-  { product: "Canvas Tote — Natural", category: "Accessories", status: "attention", stock: "4 units — reorder sent" },
-  { product: "Linen Shirt — White XL", category: "Apparel", status: "pending", stock: "Awaiting supplier ETA" },
-  { product: "Leather Card Holder — Black", category: "Accessories", status: "on-track", stock: "62 units" },
+  { product: "Merino Wool Crew, Navy S/M", category: "Apparel", status: "on-track", stock: "94 units" },
+  { product: "Canvas Tote, Natural", category: "Accessories", status: "attention", stock: "4 units, reorder sent" },
+  { product: "Linen Shirt, White XL", category: "Apparel", status: "pending", stock: "Awaiting supplier ETA" },
+  { product: "Leather Card Holder, Black", category: "Accessories", status: "on-track", stock: "62 units" },
 ];
 
 const dashExceptions = [
-  { agent: "Inventory Agent", message: "Stockout risk — Canvas Tote Natural, 4 units remaining, reorder triggered", severity: "high" },
-  { agent: "Marketing Agent", message: "Promotional post scheduled for Friday references out-of-stock SKU — review required", severity: "high" },
-  { agent: "CX Agent", message: "Lapsed customer threshold hit — 18 customers at 60-day mark, re-engagement queued", severity: "medium" },
+  { agent: "Inventory Agent", message: "Stockout risk, Canvas Tote Natural, 4 units remaining, reorder triggered", severity: "high" },
+  { agent: "Marketing Agent", message: "Promotional post scheduled for Friday references out-of-stock SKU, review required", severity: "high" },
+  { agent: "CX Agent", message: "Lapsed customer threshold hit, 18 customers at 60-day mark, re-engagement queued", severity: "medium" },
 ];
 
 const dashGovFeed = [
-  { color: "#4ADE80", label: "resolved", message: "Abandoned cart recovered — K. Osei, order confirmed $142", meta: "CX Agent — 24-hr sequence triggered automatically" },
-  { color: "#F87171", label: "urgent", message: "Promo post conflicts with stockout — Friday campaign flagged", meta: "Marketing Agent — Governing Agent — awaiting review" },
-  { color: "#60A5FA", label: "insight", message: "Linen Shirt White performing 3x category average — reorder recommended", meta: "Synthesis: Inventory + Finance" },
-  { color: "#A78BFA", label: "sync", message: "Supplier reorder SOP v1.3 applied — 3 SKUs updated", meta: "Operations Agent — cross-domain update complete" },
+  { color: "#4ADE80", label: "resolved", message: "Abandoned cart recovered, K. Osei, order confirmed $142", meta: "CX Agent, 24-hr sequence triggered automatically" },
+  { color: "#F87171", label: "urgent", message: "Promo post conflicts with stockout, Friday campaign flagged", meta: "Marketing Agent, Governing Agent, awaiting review" },
+  { color: "#60A5FA", label: "insight", message: "Linen Shirt White performing 3x category average, reorder recommended", meta: "Synthesis: Inventory + Finance" },
+  { color: "#A78BFA", label: "sync", message: "Supplier reorder SOP v1.3 applied, 3 SKUs updated", meta: "Operations Agent, cross-domain update complete" },
 ];
 
 // ── MINI DASHBOARD COMPONENT ──────────────────────────────────────────────────
@@ -313,7 +313,7 @@ function MiniDashboard({ inView }: { inView: boolean }) {
 
         {/* Footer bar */}
         <div style={{ background: "#020D1F", padding: "8px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS — Retail deployment</span>
+          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS: Retail deployment</span>
           <span style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "Manrope, sans-serif", fontSize: "10px", fontWeight: 600, color: "#60A5FA" }}>
             <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#4ADE80", boxShadow: "0 0 5px rgba(74,222,153,0.5)" }} />
             All systems operational
@@ -431,7 +431,7 @@ export default function Retail() {
             </h1>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 400, fontSize: "18px", color: "#374151", lineHeight: 1.75, maxWidth: "640px", margin: "0 auto 16px" }}>
-              Independent retailers lose margin to inventory decisions made without data, customers who never return, and marketing that goes quiet when the store gets busy. Quanton OS deploys eight coordinated AI agents that govern the operational layer of your store — so your team focuses on the customer in front of them, not the systems behind them.
+              Independent retailers lose margin to inventory decisions made without data, customers who never return, and marketing that goes quiet when the store gets busy. Quanton OS deploys eight coordinated AI agents that govern the operational layer of your store, so your team focuses on the customer in front of them, not the systems behind them.
             </p>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 500, fontSize: "16px", color: "#1F2937", lineHeight: 1.7, marginBottom: "40px" }}>
@@ -558,7 +558,7 @@ export default function Retail() {
           <div>
             <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 600, fontSize: "12px", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "16px", ...GRADIENT_TEXT }}>The operational shift</div>
             <h2 style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 38px)", color: "#1F2937", lineHeight: 1.25, marginBottom: "20px" }}>Better inventory decisions. More repeat customers. Margin protected.</h2>
-            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your store — before any commitment is made.</p>
+            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your store, before any commitment is made.</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             {[
@@ -639,7 +639,7 @@ export default function Retail() {
                   </div>
                   <div>
                     <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "14px", color: "#1F2937", marginBottom: "2px" }}>Store Owner</div>
-                    <div style={{ fontFamily: "Manrope, sans-serif", fontSize: "13px", color: "#9CA3AF" }}>Independent Retail — testimonial forthcoming</div>
+                    <div style={{ fontFamily: "Manrope, sans-serif", fontSize: "13px", color: "#9CA3AF" }}>Independent Retail, testimonial forthcoming</div>
                   </div>
                 </div>
               </div>

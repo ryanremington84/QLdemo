@@ -48,7 +48,7 @@ const painPoints = [
     icon: Package,
     title: "Parts delays and inventory gaps stalling jobs",
     description:
-      "Without governed inventory monitoring and supplier coordination, parts shortages surface at the worst possible moment — when the vehicle is already on the lift and the customer is waiting on a commitment.",
+      "Without governed inventory monitoring and supplier coordination, parts shortages surface at the worst possible moment, when the vehicle is already on the lift and the customer is waiting on a commitment.",
   },
   {
     icon: AlertCircle,
@@ -64,7 +64,7 @@ const agents = [
     name: "Customer Experience Agent",
     tagline: "Every customer kept informed without manual effort.",
     description:
-      "Appointment confirmations and reminders sent automatically. Vehicle status updates delivered at defined milestones — drop-off acknowledged, diagnosis complete, work approved, ready for pickup. Post-service follow-up executed on completion. Your customers never have to call to find out what is happening with their vehicle.",
+      "Appointment confirmations and reminders sent automatically. Vehicle status updates delivered at defined milestones: drop-off acknowledged, diagnosis complete, work approved, ready for pickup. Post-service follow-up executed on completion. Your customers never have to call to find out what is happening with their vehicle.",
     automations: [
       "Appointment confirmation and reminders",
       "Vehicle status updates at job milestones",
@@ -76,7 +76,7 @@ const agents = [
   {
     icon: Cpu,
     name: "Operations Agent",
-    tagline: "Bay scheduling, job tracking, and technician coordination — governed.",
+    tagline: "Bay scheduling, job tracking, and technician coordination, governed.",
     description:
       "Service bay assignments managed and communicated. Job progress tracked from vehicle intake to delivery. Technician task assignments updated as priorities shift. SOPs documented and enforced across job types. Supplier communications handled without the service advisor as the single point of contact.",
     automations: [
@@ -106,11 +106,11 @@ const agents = [
     name: "Finance Agent",
     tagline: "Jobs invoiced. Revenue collected. Books current.",
     description:
-      "Invoices generated on job completion. Outstanding balances tracked and followed up automatically. Repair order revenue categorised by job type and technician. Financial reports produced on schedule. You see your shop's financial performance in real time without waiting for month-end reconciliation.",
+      "Invoices generated on job completion. Outstanding balances tracked and followed up automatically. Repair order revenue categorized by job type and technician. Financial reports produced on schedule. You see your shop's financial performance in real time without waiting for month-end reconciliation.",
     automations: [
       "Invoice generation on job completion",
       "Outstanding balance tracking and follow-up",
-      "Revenue categorisation by job type",
+      "Revenue categorization by job type",
       "Shop performance and margin reporting",
     ],
     color: "linear-gradient(135deg, #7341EA, #8B37EA)",
@@ -125,7 +125,7 @@ const automations = [
   { icon: DollarSign, text: "Invoice generation triggered on job completion sign-off" },
   { icon: Clock, text: "Outstanding payment follow-up at 7, 14, and 30-day intervals" },
   { icon: MessageSquare, text: "Post-service review requests at 48 hours after vehicle delivery" },
-  { icon: BarChart2, text: "Weekly bay utilisation, revenue, and technician performance reporting" },
+  { icon: BarChart2, text: "Weekly bay utilization, revenue, and technician performance reporting" },
 ];
 
 const howItWorks = [
@@ -135,7 +135,7 @@ const howItWorks = [
     title: "Discovery and Diagnostic",
     duration: "2 to 3 weeks",
     description:
-      "We audit your shop across every operational domain — bay scheduling, job throughput, estimate conversion, parts management, invoicing, and collections. The output is a Diagnostic Report that maps where revenue is leaking and what infrastructure needs to be built. You own that report regardless of what you decide next.",
+      "We audit your shop across every operational domain: bay scheduling, job throughput, estimate conversion, parts management, invoicing, and collections. The output is a Diagnostic Report that maps where revenue is leaking and what infrastructure needs to be built. You own that report regardless of what you decide next.",
     detail: "Fixed-fee engagement. No ongoing commitment at this stage.",
   },
   {
@@ -144,7 +144,7 @@ const howItWorks = [
     title: "Infrastructure Deployment",
     duration: "8 to 16 weeks",
     description:
-      "All eight agents are configured against your specific environment — your shop management system, your parts suppliers, your CRM. The Governing Agent goes live. Your leadership dashboard is built. Appointment sequences, status update workflows, parts reorder triggers, and invoice automation are tested and governed. Your team is trained on what the system handles and what requires their judgment.",
+      "All eight agents are configured against your specific environment: your shop management system, your parts suppliers, your CRM. The Governing Agent goes live. Your leadership dashboard is built. Appointment sequences, status update workflows, parts reorder triggers, and invoice automation are tested and governed. Your team is trained on what the system handles and what requires their judgment.",
     detail: "Fixed investment. You own all deployed infrastructure on completion.",
   },
   {
@@ -153,7 +153,7 @@ const howItWorks = [
     title: "Managed Services",
     duration: "Ongoing",
     description:
-      "Quanton Labs operates the system on your behalf. Agent hosting, API costs, system monitoring, workflow optimisation, and quarterly strategic reviews are all included. Your shop keeps running at full capacity. We surface the exceptions that need your attention and handle everything that does not.",
+      "Quanton Labs operates the system on your behalf. Agent hosting, API costs, system monitoring, workflow optimization, and quarterly strategic reviews are all included. Your shop keeps running at full capacity. We surface the exceptions that need your attention and handle everything that does not.",
     detail: "Fixed monthly retainer. Six-month minimum, then month-to-month.",
   },
 ];
@@ -162,29 +162,29 @@ const howItWorks = [
 
 const dashMetrics = [
   { label: "Active Jobs", value: "14", delta: "3 awaiting parts" },
-  { label: "Bay Utilisation", value: "87%", delta: "Up from 71% pre-deployment" },
+  { label: "Bay Utilization", value: "87%", delta: "Up from 71% pre-deployment" },
   { label: "Estimates Outstanding", value: "$22,400", delta: "5 pending approval" },
   { label: "Overdue Invoices", value: "$4,100", delta: "Auto follow-up active" },
 ];
 
 const dashJobs = [
-  { vehicle: "2021 Ford F-150", job: "Transmission Service", status: "on-track", stage: "Bay 2 — In Progress" },
-  { vehicle: "2019 BMW 330i", job: "Brake Replacement", status: "attention", stage: "Parts Delayed — ETA Tomorrow" },
-  { vehicle: "2022 Toyota Camry", job: "Full Detail + PPF", status: "on-track", stage: "Bay 4 — Day 1 of 2" },
-  { vehicle: "2018 Chevy Silverado", job: "Engine Diagnostic", status: "pending", stage: "Estimate Sent — 48 hrs" },
+  { vehicle: "2021 Ford F-150", job: "Transmission Service", status: "on-track", stage: "Bay 2, In Progress" },
+  { vehicle: "2019 BMW 330i", job: "Brake Replacement", status: "attention", stage: "Parts Delayed, ETA Tomorrow" },
+  { vehicle: "2022 Toyota Camry", job: "Full Detail + PPF", status: "on-track", stage: "Bay 4, Day 1 of 2" },
+  { vehicle: "2018 Chevy Silverado", job: "Engine Diagnostic", status: "pending", stage: "Estimate Sent, 48 hrs" },
 ];
 
 const dashExceptions = [
-  { agent: "Inventory Agent", message: "Brake pad stockout risk — SKU BP-4471, 2 units remaining, reorder triggered", severity: "high" },
-  { agent: "CX Agent", message: "Estimate approval stalled — 2018 Chevy Silverado, no response in 48 hours", severity: "medium" },
-  { agent: "Finance Agent", message: "Invoice overdue 12 days — R. Alvarez, $1,840 outstanding", severity: "high" },
+  { agent: "Inventory Agent", message: "Brake pad stockout risk, SKU BP-4471, 2 units remaining, reorder triggered", severity: "high" },
+  { agent: "CX Agent", message: "Estimate approval stalled, 2018 Chevy Silverado, no response in 48 hours", severity: "medium" },
+  { agent: "Finance Agent", message: "Invoice overdue 12 days, R. Alvarez, $1,840 outstanding", severity: "high" },
 ];
 
 const dashGovFeed = [
-  { color: "#4ADE80", label: "resolved", message: "Parts reorder confirmed — brake pads ETA Wednesday, 3 units", meta: "Inventory Agent — supplier confirmed, job unaffected" },
-  { color: "#FBBF24", label: "escalated", message: "Estimate follow-up queued — Silverado diagnostic at risk of going cold", meta: "CX Agent — Governing Agent — direct outreach approved" },
-  { color: "#60A5FA", label: "insight", message: "Bay utilisation up 16 points since scheduling automation deployed", meta: "Synthesis: Operations + Finance" },
-  { color: "#A78BFA", label: "sync", message: "Status update SOP v1.2 applied — all active jobs updated", meta: "Operations Agent — cross-domain update complete" },
+  { color: "#4ADE80", label: "resolved", message: "Parts reorder confirmed, brake pads ETA Wednesday, 3 units", meta: "Inventory Agent, supplier confirmed, job unaffected" },
+  { color: "#FBBF24", label: "escalated", message: "Estimate follow-up queued, Silverado diagnostic at risk of going cold", meta: "CX Agent, Governing Agent, direct outreach approved" },
+  { color: "#60A5FA", label: "insight", message: "Bay utilization up 16 points since scheduling automation deployed", meta: "Synthesis: Operations + Finance" },
+  { color: "#A78BFA", label: "sync", message: "Status update SOP v1.2 applied, all active jobs updated", meta: "Operations Agent, cross-domain update complete" },
 ];
 
 // ── MINI DASHBOARD COMPONENT ──────────────────────────────────────────────────
@@ -313,7 +313,7 @@ function MiniDashboard({ inView }: { inView: boolean }) {
 
         {/* Footer bar */}
         <div style={{ background: "#020D1F", padding: "8px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS — Automotive deployment</span>
+          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS: Automotive deployment</span>
           <span style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "Manrope, sans-serif", fontSize: "10px", fontWeight: 600, color: "#60A5FA" }}>
             <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#4ADE80", boxShadow: "0 0 5px rgba(74,222,153,0.5)" }} />
             All systems operational
@@ -431,7 +431,7 @@ export default function Automotive() {
             </h1>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 400, fontSize: "18px", color: "#374151", lineHeight: 1.75, maxWidth: "640px", margin: "0 auto 16px" }}>
-              Automotive businesses lose revenue to idle bays, parts delays, unconverted estimates, and customers who never heard back. Quanton OS deploys eight coordinated AI agents that govern the operational layer of your shop — so your service advisors and technicians focus on vehicles, not administrative volume.
+              Automotive businesses lose revenue to idle bays, parts delays, unconverted estimates, and customers who never heard back. Quanton OS deploys eight coordinated AI agents that govern the operational layer of your shop, so your service advisors and technicians focus on vehicles, not administrative volume.
             </p>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 500, fontSize: "16px", color: "#1F2937", lineHeight: 1.7, marginBottom: "40px" }}>
@@ -558,11 +558,11 @@ export default function Automotive() {
           <div>
             <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 600, fontSize: "12px", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "16px", ...GRADIENT_TEXT }}>The operational shift</div>
             <h2 style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 38px)", color: "#1F2937", lineHeight: 1.25, marginBottom: "20px" }}>Bays busier. Estimates converting. Cash flow visible.</h2>
-            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your shop — before any commitment is made.</p>
+            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your shop, before any commitment is made.</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             {[
-              { label: "Bay utilisation", value: "Improved through scheduling governance", sub: "Fewer idle slots from better job coordination and customer follow-up" },
+              { label: "Bay utilization", value: "Improved through scheduling governance", sub: "Fewer idle slots from better job coordination and customer follow-up" },
               { label: "Estimate conversion", value: "Lifted through structured follow-up", sub: "Approved work that was never scheduled becomes booked revenue" },
               { label: "Parts-related delays", value: "Reduced through inventory automation", sub: "Reorder triggers before shortages stall jobs already in progress" },
             ].map((stat) => (
@@ -639,7 +639,7 @@ export default function Automotive() {
                   </div>
                   <div>
                     <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "14px", color: "#1F2937", marginBottom: "2px" }}>Shop Owner</div>
-                    <div style={{ fontFamily: "Manrope, sans-serif", fontSize: "13px", color: "#9CA3AF" }}>Automotive Business — testimonial forthcoming</div>
+                    <div style={{ fontFamily: "Manrope, sans-serif", fontSize: "13px", color: "#9CA3AF" }}>Automotive Business, testimonial forthcoming</div>
                   </div>
                 </div>
               </div>

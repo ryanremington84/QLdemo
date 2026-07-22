@@ -91,7 +91,7 @@ const agents = [
     name: "Operations Agent",
     tagline: "Your practice runs to a documented standard every day.",
     description:
-      "Schedules managed. Staff task assignments tracked. SOPs maintained and versioned. Supplier and vendor communications handled. Compliance deadlines — certifications, insurance, regulatory — surfaced before they become problems. Your operation runs consistently whether you are present or not.",
+      "Schedules managed. Staff task assignments tracked. SOPs maintained and versioned. Supplier and vendor communications handled. Compliance deadlines, certifications, insurance, regulatory, surfaced before they become problems. Your operation runs consistently whether you are present or not.",
     automations: [
       "Staff scheduling and task assignment",
       "SOP governance and versioning",
@@ -105,12 +105,12 @@ const agents = [
     name: "Finance Agent",
     tagline: "Revenue tracked. Payments collected. Books current.",
     description:
-      "Invoices generated on session completion. Outstanding balances followed up automatically. Membership billing managed without manual intervention. Expenses categorised and reported. You see your financial position in real time without chasing your own books or waiting for month-end.",
+      "Invoices generated on session completion. Outstanding balances followed up automatically. Membership billing managed without manual intervention. Expenses categorized and reported. You see your financial position in real time without chasing your own books or waiting for month-end.",
     automations: [
       "Session and package invoice generation",
       "Outstanding balance follow-up",
       "Membership and subscription billing",
-      "Expense categorisation and financial reporting",
+      "Expense categorization and financial reporting",
     ],
     color: "linear-gradient(135deg, #7341EA, #8B37EA)",
   },
@@ -134,7 +134,7 @@ const howItWorks = [
     title: "Discovery and Diagnostic",
     duration: "2 to 3 weeks",
     description:
-      "We audit your practice across every operational domain — scheduling, client retention, billing, staff coordination, and compliance. The output is a Diagnostic Report that maps where revenue is leaking, where capacity is constrained, and exactly what needs to be built. You own that report regardless of what you decide next.",
+      "We audit your practice across every operational domain: scheduling, client retention, billing, staff coordination, and compliance. The output is a Diagnostic Report that maps where revenue is leaking, where capacity is constrained, and exactly what needs to be built. You own that report regardless of what you decide next.",
     detail: "Fixed-fee engagement. No ongoing commitment at this stage.",
   },
   {
@@ -143,7 +143,7 @@ const howItWorks = [
     title: "Infrastructure Deployment",
     duration: "8 to 16 weeks",
     description:
-      "All eight agents are configured against your specific environment — your booking platform, your CRM, your billing system. The Governing Agent goes live. Your leadership dashboard is built. Reminder sequences, rebooking workflows, and retention campaigns are tested and governed. Your team is trained on approval gates and what requires human judgment.",
+      "All eight agents are configured against your specific environment: your booking platform, your CRM, your billing system. The Governing Agent goes live. Your leadership dashboard is built. Reminder sequences, rebooking workflows, and retention campaigns are tested and governed. Your team is trained on approval gates and what requires human judgment.",
     detail: "Fixed investment. You own all deployed infrastructure on completion.",
   },
   {
@@ -152,7 +152,7 @@ const howItWorks = [
     title: "Managed Services",
     duration: "Ongoing",
     description:
-      "Quanton Labs operates the system on your behalf. Agent hosting, API costs, system monitoring, workflow optimisation, and quarterly strategic reviews are all included. Your practice keeps running at full capacity. We surface exceptions that need your attention and handle everything that does not.",
+      "Quanton Labs operates the system on your behalf. Agent hosting, API costs, system monitoring, workflow optimization, and quarterly strategic reviews are all included. Your practice keeps running at full capacity. We surface exceptions that need your attention and handle everything that does not.",
     detail: "Fixed monthly retainer. Six-month minimum, then month-to-month.",
   },
 ];
@@ -162,7 +162,7 @@ const howItWorks = [
 const dashMetrics = [
   { label: "Appointments This Week", value: "94", delta: "4 no-shows recovered" },
   { label: "Lapsed Client Pipeline", value: "38", delta: "12 re-engaged this month" },
-  { label: "Membership Revenue", value: "$14,280", delta: "MRR — 3 new this week" },
+  { label: "Membership Revenue", value: "$14,280", delta: "MRR, 3 new this week" },
   { label: "Outstanding Balances", value: "$2,140", delta: "Auto follow-up active" },
 ];
 
@@ -170,20 +170,20 @@ const dashAppointments = [
   { client: "Sarah Nguyen", service: "60-min Deep Tissue", status: "confirmed", time: "9:00 AM" },
   { client: "Marcus Reid", service: "Initial Consultation", status: "confirmed", time: "10:30 AM" },
   { client: "Priya Sharma", service: "Monthly Membership", status: "attention", time: "12:00 PM" },
-  { client: "James Okafor", service: "Follow-up — Week 4", status: "pending", time: "2:15 PM" },
+  { client: "James Okafor", service: "Follow-up, Week 4", status: "pending", time: "2:15 PM" },
 ];
 
 const dashExceptions = [
-  { agent: "CX Agent", message: "Lapsed client threshold hit — Dana Kowalski, 62 days since last visit", severity: "medium" },
-  { agent: "Finance Agent", message: "Membership renewal overdue — Priya Sharma, card declined", severity: "high" },
-  { agent: "Operations Agent", message: "Staff cert expiring in 14 days — L. Torres, CPR renewal required", severity: "medium" },
+  { agent: "CX Agent", message: "Lapsed client threshold hit, Dana Kowalski, 62 days since last visit", severity: "medium" },
+  { agent: "Finance Agent", message: "Membership renewal overdue, Priya Sharma, card declined", severity: "high" },
+  { agent: "Operations Agent", message: "Staff cert expiring in 14 days, L. Torres, CPR renewal required", severity: "medium" },
 ];
 
 const dashGovFeed = [
-  { color: "#4ADE80", label: "resolved", message: "Rebooking confirmed — Sarah Nguyen, next visit scheduled", meta: "CX Agent — post-visit follow-up triggered automatically" },
-  { color: "#FBBF24", label: "escalated", message: "Declined card flagged — Priya Sharma membership at risk", meta: "Finance Agent — Governing Agent — awaiting review" },
-  { color: "#60A5FA", label: "insight", message: "Re-engagement rate up 31% — 30-day campaign performing", meta: "Synthesis: Sales + CX + Finance" },
-  { color: "#A78BFA", label: "sync", message: "Reminder sequence updated — new 48-hr cadence applied", meta: "Operations Agent — cross-domain update complete" },
+  { color: "#4ADE80", label: "resolved", message: "Rebooking confirmed, Sarah Nguyen, next visit scheduled", meta: "CX Agent, post-visit follow-up triggered automatically" },
+  { color: "#FBBF24", label: "escalated", message: "Declined card flagged, Priya Sharma membership at risk", meta: "Finance Agent, Governing Agent, awaiting review" },
+  { color: "#60A5FA", label: "insight", message: "Re-engagement rate up 31%, 30-day campaign performing", meta: "Synthesis: Sales + CX + Finance" },
+  { color: "#A78BFA", label: "sync", message: "Reminder sequence updated, new 48-hr cadence applied", meta: "Operations Agent, cross-domain update complete" },
 ];
 
 // ── MINI DASHBOARD COMPONENT ──────────────────────────────────────────────────
@@ -312,7 +312,7 @@ function MiniDashboard({ inView }: { inView: boolean }) {
 
         {/* Footer bar */}
         <div style={{ background: "#020D1F", padding: "8px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS — Health and Wellness deployment</span>
+          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS: Health and Wellness deployment</span>
           <span style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "Manrope, sans-serif", fontSize: "10px", fontWeight: 600, color: "#60A5FA" }}>
             <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#4ADE80", boxShadow: "0 0 5px rgba(74,222,153,0.5)" }} />
             All systems operational
@@ -428,7 +428,7 @@ export default function HealthWellness() {
             </h1>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 400, fontSize: "18px", color: "#374151", lineHeight: 1.75, maxWidth: "640px", margin: "0 auto 16px" }}>
-              Wellness businesses lose revenue to no-shows, lapsed clients, and front-desk capacity limits. Quanton OS deploys eight coordinated AI agents that govern the operational layer of your practice — so your team focuses on client outcomes, not administrative volume.
+              Wellness businesses lose revenue to no-shows, lapsed clients, and front-desk capacity limits. Quanton OS deploys eight coordinated AI agents that govern the operational layer of your practice, so your team focuses on client outcomes, not administrative volume.
             </p>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 500, fontSize: "16px", color: "#1F2937", lineHeight: 1.7, marginBottom: "40px" }}>
@@ -449,7 +449,7 @@ export default function HealthWellness() {
             </div>
           </motion.div>
 
-       {/* ── VIDEO EMBED ── */}
+          {/* ── VIDEO EMBED ── */}
           <motion.div
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
@@ -469,7 +469,8 @@ export default function HealthWellness() {
             >
               <iframe
                 src="https://www.youtube-nocookie.com/embed/q4rrOg3G3lQ?rel=0&modestbranding=1"
-title="Fragmented Tools Cost Your Wellness Practice | AI Fix | Quanton Labs"                loading="lazy"
+                title="Fragmented Tools Cost Your Wellness Practice | AI Fix | Quanton Labs"
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 style={{
@@ -483,7 +484,7 @@ title="Fragmented Tools Cost Your Wellness Practice | AI Fix | Quanton Labs"    
               />
             </div>
           </motion.div>
-            </div>
+        </div>
       </section>
 
       {/* ── PAIN POINTS ── */}
@@ -555,7 +556,7 @@ title="Fragmented Tools Cost Your Wellness Practice | AI Fix | Quanton Labs"    
           <div>
             <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 600, fontSize: "12px", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "16px", ...GRADIENT_TEXT }}>The operational shift</div>
             <h2 style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 38px)", color: "#1F2937", lineHeight: 1.25, marginBottom: "20px" }}>Revenue recovered. Retention restored. Practice capacity unlocked.</h2>
-            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your practice — before any commitment is made.</p>
+            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your practice, before any commitment is made.</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             {[
