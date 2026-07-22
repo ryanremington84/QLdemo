@@ -452,41 +452,6 @@ export default function HomeServices() {
             </div>
           </motion.div>
 
-          {/* ── VIDEO EMBED ── */}
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }}
-            style={{ marginTop: "64px" }}
-          >
-            <div
-              style={{
-                position: "relative",
-                borderRadius: "16px",
-                overflow: "hidden",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
-                aspectRatio: "16 / 9",
-                background: "#000000",
-              }}
-            >
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/ObfcY2xOwbM?rel=0&modestbranding=1"
-                title="Why Home Services Businesses Lose Revenue to Their Own Operations | Quanton Labs"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                }}
-              />
-            </div>
-          </motion.div>
         </div>
       </section>
 
