@@ -23,7 +23,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 0,
     title: "Precision Manufacturer",
-    subtitle: "Full Quanton OS Deployment, Phase 2 Live",
+    subtitle: "Manufacturing",
     before: {
       heading: "No Prior ERP, Manual Coordination at Scale",
       growthDriver: "A precision manufacturer scaling order volume with no system connecting sales, inventory, and fulfillment.",
@@ -61,7 +61,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 1,
     title: "Executive Coaching Platform",
-    subtitle: "Sales and Customer Experience Deployment, Fully Active",
+    subtitle: "Professional Services",
     before: {
       heading: "Lead Volume Outpacing Manual Follow-Up",
       growthDriver: "A high-touch coaching business generating strong inbound interest with no system to convert volume into booked calls at speed.",
@@ -96,7 +96,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 2,
     title: "Charter and Hospitality Business",
-    subtitle: "Website, CRM, and Marketing Deployment, Complete and Running",
+    subtitle: "Retail and Hospitality",
     before: {
       heading: "No Website, No System, No Digital Presence",
       growthDriver: "A charter business built on referral and reputation with no digital infrastructure supporting lead capture or ongoing marketing.",
@@ -131,7 +131,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 3,
     title: "Property Management Operation",
-    subtitle: "Short and Long-Term Rental Portfolio, Live Deployment",
+    subtitle: "Real Estate and Property Management",
     before: {
       heading: "Portfolio Coordination Running on Manual Tracking",
       growthDriver: "A property management operation spanning both short and long-term rental units with vendor, CRM, and advertising coordination handled manually across the portfolio.",
@@ -166,7 +166,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 4,
     title: "Independent Real Estate Practice",
-    subtitle: "Sales and Customer Experience Build, In Development",
+    subtitle: "Real Estate",
     before: {
       heading: "Outbound Lead Sourcing With No CRM Sync",
       growthDriver: "An individual real estate agent generating leads through multiple channels with no unified system connecting sourcing to follow-up to compliance tracking.",
@@ -195,6 +195,44 @@ export const caseStudies: CaseStudy[] = [
         "Compliance flag rate",
         "CRM sync accuracy",
         "Appointment booking rate",
+      ],
+    },
+  },
+  {
+    id: 5,
+    title: "Bespoke Automotive Restoration Shop",
+    subtitle: "Automotive",
+    before: {
+      heading: "Nine Disconnected Systems Running One Shop",
+      growthDriver: "A premium automotive services business run entirely on the founder's direct involvement, with every operational function living in a different tool.",
+      aiUse: "None. A scheduling app for bookings, payments, and client tracking. Google Drive for documents and photos. Five separate social platforms posted through Later, Canva, and Meta Business Suite. QuickBooks Online plus a bookkeeper and CPA for finance. Inventory tracked loosely inside the scheduling app.",
+      operatingReality: "Nine or more disconnected systems, each requiring separate manual attention, with no shared state between any of them. Posting tools broke often enough that posts were missed outright. Inventory in the scheduling app went stale because staff rarely updated it, leading to last-minute part orders at higher shipping cost and higher per-unit price. Client texts and emails outside business hours went unnoticed until the next day. Training had no system behind it, staff either figured it out on their own or the shop closed for a day, or overtime got paid for a dedicated training session.",
+      failurePattern: "Founder dependency compounding across every function at once: scheduling, inventory, social media, client communication, and staff training all required direct personal attention because no system connected them or ran independently.",
+      outcomes: [
+        "Missed social posts from tool failures with no fallback or alert",
+        "Higher part costs from reactive, last-minute ordering instead of planned reorder points",
+        "Client messages outside business hours sitting unanswered until the next day",
+        "Staff training with no consistent system, costing either a closed shop day or paid overtime",
+      ],
+    },
+    after: {
+      operatingArchitecture: "This is the exact pattern that led to Quanton OS. Every one of these fragmented tools, scheduling, inventory, social, client communication, training, maps directly to a functional agent in the platform today.",
+      standardization: [
+        "Scheduling, payments, and client tracking unified with inventory instead of loosely connected",
+        "Reorder points tied to real usage instead of staff remembering to check stock",
+        "A single governed workflow for onboarding and complaint handling instead of ad hoc handling per incident",
+      ],
+      governance: [
+        "After-hours client messages routed and triaged instead of sitting unread until the next business day",
+        "Social posting running on a governed schedule instead of three separate manual tools that could silently fail",
+        "Training tracked as a system with defined completion criteria, instead of informal on-the-job figuring-out",
+      ],
+      result: "The architecture built to solve this exact pattern is what now runs across Quanton Labs' current deployments.",
+      kpis: [
+        "Missed social posts per month",
+        "Emergency part orders per month",
+        "After-hours response time",
+        "Staff training completion rate",
       ],
     },
   },
