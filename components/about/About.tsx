@@ -178,19 +178,22 @@ export default function About() {
       </section>
 
       {/* ── PROOF POINT ── */}
-      <section ref={proofRef} style={{ backgroundColor: "#041227", padding: "100px 24px" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
-          <motion.div initial={{ opacity: 0, y: 24 }} animate={proofInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.55, ease: "easeOut" }}>
-            <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 600, fontSize: "12px", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "20px", ...GRADIENT_TEXT }}>The infrastructure, not the theory</div>
-            <h2 style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 38px)", color: "#ffffff", lineHeight: 1.3, marginBottom: "24px" }}>
-              Quanton OS is the system built from that pattern: size the controllable loss, then deploy the infrastructure that removes it.
-            </h2>
-            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "16px", color: "rgba(255,255,255,0.65)", lineHeight: 1.75, maxWidth: "560px", margin: "0 auto" }}>
-              Proven across four ownership transitions, not designed in the abstract and applied afterward.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+<section ref={proofRef} style={{ backgroundColor: "#041227", padding: "100px 24px" }}>
+  <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+    <motion.div initial={{ opacity: 0, y: 24 }} animate={proofInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.55, ease: "easeOut" }}>
+      <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 600, fontSize: "12px", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "20px", ...GRADIENT_TEXT }}>The infrastructure, not the theory</div>
+      <h2 style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 38px)", color: "#ffffff", lineHeight: 1.3, marginBottom: "24px" }}>
+        Quanton OS is the system built from that pattern: size the controllable loss, then deploy the infrastructure that removes it.
+      </h2>
+      <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "16px", color: "rgba(255,255,255,0.65)", lineHeight: 1.75, maxWidth: "560px", margin: "0 auto 32px" }}>
+        Multiple deployments are live right now, across manufacturing, real estate, events, and consumer platforms, each running on the same governed architecture.
+      </p>
+      <Link href="/case-studies" style={{ display: "inline-flex", alignItems: "center", gap: "8px", fontFamily: "Manrope, sans-serif", fontWeight: 600, fontSize: "14px", ...GRADIENT_TEXT, textDecoration: "none" }}>
+        See current deployments <ArrowRight size={14} />
+      </Link>
+    </motion.div>
+  </div>
+</section>
 
       {/* ── CTA ── */}
       <section ref={ctaRef} style={{ backgroundColor: "#ffffff", padding: "80px 24px 120px" }}>
