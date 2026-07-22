@@ -54,7 +54,7 @@ const painPoints = [
     icon: Users,
     title: "No cross-practice visibility",
     description:
-      "Revenue leakage, pipeline gaps, and staff utilisation issues surface too late. You are making decisions on instinct rather than a live operational picture.",
+      "Revenue leakage, pipeline gaps, and staff utilization issues surface too late. You are making decisions on instinct rather than a live operational picture.",
   },
 ];
 
@@ -106,11 +106,11 @@ const agents = [
     name: "Finance Agent",
     tagline: "Revenue that gets collected.",
     description:
-      "Invoices generated on completion triggers. Receivables tracked and followed up automatically. Expenses categorised without manual entry. Financial reports produced on schedule. You see what you are owed and what you have earned without chasing your own books.",
+      "Invoices generated on completion triggers. Receivables tracked and followed up automatically. Expenses categorized without manual entry. Financial reports produced on schedule. You see what you are owed and what you have earned without chasing your own books.",
     automations: [
       "Invoice generation on engagement milestones",
       "Receivables tracking and follow-up",
-      "Expense categorisation",
+      "Expense categorization",
       "P&L and cashflow reporting",
     ],
     color: "linear-gradient(135deg, #7341EA, #8B37EA)",
@@ -122,10 +122,10 @@ const automations = [
   { icon: TrendingUp, text: "Proposal generation from CRM opportunity data" },
   { icon: DollarSign, text: "Invoice triggers on project milestone completion" },
   { icon: Calendar, text: "Meeting scheduling and confirmation workflows" },
-  { icon: Users, text: "Staff utilisation monitoring and reallocation alerts" },
+  { icon: Users, text: "Staff utilization monitoring and reallocation alerts" },
   { icon: MessageSquare, text: "Client satisfaction checks at defined touchpoints" },
   { icon: FileText, text: "Compliance deadline tracking across all active engagements" },
-  { icon: BarChart2, text: "Weekly practice performance reports to leadership" },
+  { icon: BarChart2, text: "Weekly firm performance reports to leadership" },
 ];
 
 const howItWorks = [
@@ -135,7 +135,7 @@ const howItWorks = [
     title: "Discovery and Diagnostic",
     duration: "2 to 3 weeks",
     description:
-      "We conduct a structured audit of your practice across all operational domains — client delivery, pipeline management, finance, team coordination, and compliance. The output is a Diagnostic Report that maps your current gaps, quantifies value leakage, and defines the exact deployment scope. You own that report regardless of what you decide next.",
+      "We conduct a structured audit of your practice across all operational domains: client delivery, pipeline management, finance, team coordination, and compliance. The output is a Diagnostic Report that maps your current gaps, quantifies value leakage, and defines the exact deployment scope. You own that report regardless of what you decide next.",
     detail: "Fixed-fee engagement. No ongoing commitment at this stage.",
   },
   {
@@ -144,7 +144,7 @@ const howItWorks = [
     title: "Infrastructure Deployment",
     duration: "8 to 16 weeks",
     description:
-      "All eight agents are configured and deployed against your specific integration environment — your CRM, your accounting platform, your project management tools. The Governing Agent goes live. Your leadership dashboard is built. SOPs are documented and your team is trained on how the approval gates work and what requires human judgment.",
+      "All eight agents are configured and deployed against your specific integration environment: your CRM, your accounting platform, your project management tools. The Governing Agent goes live. Your leadership dashboard is built. SOPs are documented and your team is trained on how the approval gates work and what requires human judgment.",
     detail: "Fixed investment. You own all deployed infrastructure on completion.",
   },
   {
@@ -153,7 +153,7 @@ const howItWorks = [
     title: "Managed Services",
     duration: "Ongoing",
     description:
-      "Once deployed, Quanton Labs operates the system on your behalf. We handle agent hosting, API costs, system monitoring, workflow optimisation, and quarterly strategic reviews. Your practice keeps running at full capacity. We surface what needs your attention and handle everything that does not.",
+      "Once deployed, Quanton Labs operates the system on your behalf. We handle agent hosting, API costs, system monitoring, workflow optimization, and quarterly strategic reviews. Your practice keeps running at full capacity. We surface what needs your attention and handle everything that does not.",
     detail: "Fixed monthly retainer. Six-month minimum, then month-to-month.",
   },
 ];
@@ -175,16 +175,16 @@ const dashEngagements = [
 ];
 
 const dashExceptions = [
-  { agent: "Finance Agent", message: "Invoice #1047 overdue by 8 days — Clearfield & Associates", severity: "high" },
-  { agent: "Sales Agent", message: "Follow-up sequence stalled — Northgate Consulting, no open in 6 days", severity: "medium" },
-  { agent: "Customer Experience", message: "Onboarding milestone missed — Apex Advisory Partners", severity: "medium" },
+  { agent: "Finance Agent", message: "Invoice #1047 overdue by 8 days, Clearfield & Associates", severity: "high" },
+  { agent: "Sales Agent", message: "Follow-up sequence stalled, Northgate Consulting, no open in 6 days", severity: "medium" },
+  { agent: "Customer Experience", message: "Onboarding milestone missed, Apex Advisory Partners", severity: "medium" },
 ];
 
 const dashGovFeed = [
-  { color: "#4ADE80", label: "resolved", message: "Invoice follow-up sent — Clearfield & Associates", meta: "Finance Agent — automated, no action required" },
-  { color: "#60A5FA", label: "insight", message: "Pipeline velocity up 22% — 3 proposals active", meta: "Synthesis: Sales + Marketing + CX" },
-  { color: "#FBBF24", label: "escalated", message: "Onboarding gap flagged — Apex Advisory Partners", meta: "CX Agent — Governing Agent — awaiting review" },
-  { color: "#A78BFA", label: "sync", message: "SOP v2.3 applied across all active engagements", meta: "Operations Agent — cross-domain update complete" },
+  { color: "#4ADE80", label: "resolved", message: "Invoice follow-up sent, Clearfield & Associates", meta: "Finance Agent, automated, no action required" },
+  { color: "#60A5FA", label: "insight", message: "Pipeline velocity up 22%, 3 proposals active", meta: "Synthesis: Sales + Marketing + CX" },
+  { color: "#FBBF24", label: "escalated", message: "Onboarding gap flagged, Apex Advisory Partners", meta: "CX Agent, Governing Agent, awaiting review" },
+  { color: "#A78BFA", label: "sync", message: "SOP v2.3 applied across all active engagements", meta: "Operations Agent, cross-domain update complete" },
 ];
 
 // ── MINI DASHBOARD COMPONENT ──────────────────────────────────────────────────
@@ -313,7 +313,7 @@ function MiniDashboard({ inView }: { inView: boolean }) {
 
         {/* Footer bar */}
         <div style={{ background: "#020D1F", padding: "8px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS — Professional Services deployment</span>
+          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS: Professional Services deployment</span>
           <span style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "Manrope, sans-serif", fontSize: "10px", fontWeight: 600, color: "#60A5FA" }}>
             <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#4ADE80", boxShadow: "0 0 5px rgba(74,222,153,0.5)" }} />
             All systems operational
@@ -429,7 +429,7 @@ export default function ProfessionalServices() {
             </h1>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 400, fontSize: "18px", color: "#374151", lineHeight: 1.75, maxWidth: "640px", margin: "0 auto 16px" }}>
-              Professional services firms lose revenue to admin, inconsistency, and the absence of governed processes. Quanton OS deploys eight coordinated AI agents that handle the operational surface of your practice — so your team focuses on delivering, not managing.
+              Professional services firms lose revenue to admin, inconsistency, and the absence of governed processes. Quanton OS deploys eight coordinated AI agents that handle the operational surface of your practice, so your team focuses on delivering, not managing.
             </p>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 500, fontSize: "16px", color: "#1F2937", lineHeight: 1.7, marginBottom: "40px" }}>
@@ -450,42 +450,7 @@ export default function ProfessionalServices() {
             </div>
           </motion.div>
 
-         {/* ── VIDEO EMBED ── */}
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }}
-            style={{ marginTop: "64px" }}
-          >
-            <div
-              style={{
-                position: "relative",
-                borderRadius: "16px",
-                overflow: "hidden",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
-                aspectRatio: "16 / 9",
-                background: "#000000",
-              }}
-            >
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/jRwekDL8ggY?rel=0&modestbranding=1"
-                title="Your Fragmented Tools Are the Problem. AI Infrastructure Is the Fix | Quanton Labs"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                }}
-              />
-            </div>
-          </motion.div>
-        </div>
+                 </div>
       </section>
 
       {/* ── PAIN POINTS ── */}
@@ -557,7 +522,7 @@ export default function ProfessionalServices() {
           <div>
             <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 600, fontSize: "12px", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "16px", ...GRADIENT_TEXT }}>The operational shift</div>
             <h2 style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 38px)", color: "#1F2937", lineHeight: 1.25, marginBottom: "20px" }}>Time recovered. Revenue collected. Practice clarity restored.</h2>
-            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your practice — before any commitment is made.</p>
+            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your practice, before any commitment is made.</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             {[
@@ -638,7 +603,7 @@ export default function ProfessionalServices() {
                   </div>
                   <div>
                     <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "14px", color: "#1F2937", marginBottom: "2px" }}>Managing Partner</div>
-                    <div style={{ fontFamily: "Manrope, sans-serif", fontSize: "13px", color: "#9CA3AF" }}>Professional Services Firm — testimonial forthcoming</div>
+                    <div style={{ fontFamily: "Manrope, sans-serif", fontSize: "13px", color: "#9CA3AF" }}>Professional Services Firm, testimonial forthcoming</div>
                   </div>
                 </div>
               </div>

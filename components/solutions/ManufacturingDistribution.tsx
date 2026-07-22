@@ -42,13 +42,13 @@ const painPoints = [
     icon: Clock,
     title: "Production scheduling running on spreadsheets and calls",
     description:
-      "Coordinating orders, materials, and production runs manually creates constant bottlenecks. When one order slips, the whole schedule shifts — and customers find out when they call to chase their delivery, not before.",
+      "Coordinating orders, materials, and production runs manually creates constant bottlenecks. When one order slips, the whole schedule shifts, and customers find out when they call to chase their delivery, not before.",
   },
   {
     icon: Package,
     title: "Supplier delays and materials shortages stopping production",
     description:
-      "Without governed inventory monitoring and supplier coordination, materials shortages surface after production has already been committed. The cost is not just the delay — it is the customer relationship and the margin lost to rush orders.",
+      "Without governed inventory monitoring and supplier coordination, materials shortages surface after production has already been committed. The cost is not just the delay, it is the customer relationship and the margin lost to rush orders.",
   },
   {
     icon: AlertCircle,
@@ -62,7 +62,7 @@ const agents = [
   {
     icon: Cpu,
     name: "Operations Agent",
-    tagline: "Production scheduling, order tracking, and floor coordination — governed.",
+    tagline: "Production scheduling, order tracking, and floor coordination, governed.",
     description:
       "Orders tracked from intake to fulfillment. Production run assignments coordinated and communicated. Task assignments managed across the floor without the owner as the single point of contact. SOPs documented and enforced across product types and production processes. Your operation runs to a consistent standard whether you are present or not.",
     automations: [
@@ -106,11 +106,11 @@ const agents = [
     name: "Finance Agent",
     tagline: "Orders invoiced. Cash flow visible. Books current.",
     description:
-      "Invoices generated on order completion and shipment triggers. Outstanding balances tracked and followed up automatically. Costs categorised by order, product line, and supplier. Margin analysis surfaced without manual spreadsheet work. Financial reports produced on schedule. You see the financial performance of your operation in real time.",
+      "Invoices generated on order completion and shipment triggers. Outstanding balances tracked and followed up automatically. Costs categorized by order, product line, and supplier. Margin analysis surfaced without manual spreadsheet work. Financial reports produced on schedule. You see the financial performance of your operation in real time.",
     automations: [
       "Invoice generation on order completion and shipment",
       "Outstanding balance tracking and follow-up",
-      "Cost categorisation by order and product line",
+      "Cost categorization by order and product line",
       "Margin analysis and financial performance reporting",
     ],
     color: "linear-gradient(135deg, #7341EA, #8B37EA)",
@@ -135,7 +135,7 @@ const howItWorks = [
     title: "Discovery and Diagnostic",
     duration: "2 to 3 weeks",
     description:
-      "We audit your operation across every domain — production scheduling, materials management, order fulfillment, supplier coordination, customer communications, and financial visibility. The output is a Diagnostic Report that maps where delays originate, where margin is lost, and what infrastructure needs to be built. You own that report regardless of what you decide next.",
+      "We audit your operation across every domain: production scheduling, materials management, order fulfillment, supplier coordination, customer communications, and financial visibility. The output is a Diagnostic Report that maps where delays originate, where margin is lost, and what infrastructure needs to be built. You own that report regardless of what you decide next.",
     detail: "Fixed-fee engagement. No ongoing commitment at this stage.",
   },
   {
@@ -144,7 +144,7 @@ const howItWorks = [
     title: "Infrastructure Deployment",
     duration: "8 to 16 weeks",
     description:
-      "All eight agents are configured against your specific environment — your ERP, your inventory system, your supplier network, your customer communication platforms. The Governing Agent goes live. Your leadership dashboard is built. Production scheduling workflows, materials reorder triggers, customer update sequences, and invoice automation are tested and governed. Your team is trained on what the system handles and what requires their judgment.",
+      "All eight agents are configured against your specific environment: your ERP, your inventory system, your supplier network, your customer communication platforms. The Governing Agent goes live. Your leadership dashboard is built. Production scheduling workflows, materials reorder triggers, customer update sequences, and invoice automation are tested and governed. Your team is trained on what the system handles and what requires their judgment.",
     detail: "Fixed investment. You own all deployed infrastructure on completion.",
   },
   {
@@ -153,7 +153,7 @@ const howItWorks = [
     title: "Managed Services",
     duration: "Ongoing",
     description:
-      "Quanton Labs operates the system on your behalf. Agent hosting, API costs, system monitoring, workflow optimisation, and quarterly strategic reviews are all included. Your operation keeps running at full capacity. We surface the exceptions that need leadership attention and handle everything that does not.",
+      "Quanton Labs operates the system on your behalf. Agent hosting, API costs, system monitoring, workflow optimization, and quarterly strategic reviews are all included. Your operation keeps running at full capacity. We surface the exceptions that need leadership attention and handle everything that does not.",
     detail: "Fixed monthly retainer. Six-month minimum, then month-to-month.",
   },
 ];
@@ -168,23 +168,23 @@ const dashMetrics = [
 ];
 
 const dashOrders = [
-  { order: "PO-2841 — Hartwell Distributors", product: "Steel Bracket Assembly x 400", status: "on-track", eta: "Ships Friday" },
-  { order: "PO-2837 — Consolidated Supply", product: "Powder Coat Panels x 200", status: "attention", eta: "Materials delay — 2 days" },
-  { order: "PO-2829 — Meridian Industrial", product: "Custom Fabrication Run", status: "on-track", eta: "In production — Day 3 of 5" },
-  { order: "PO-2815 — Apex Components", product: "Aluminium Housing x 600", status: "pending", eta: "Awaiting materials confirmation" },
+  { order: "PO-2841, Hartwell Distributors", product: "Steel Bracket Assembly x 400", status: "on-track", eta: "Ships Friday" },
+  { order: "PO-2837, Consolidated Supply", product: "Powder Coat Panels x 200", status: "attention", eta: "Materials delay, 2 days" },
+  { order: "PO-2829, Meridian Industrial", product: "Custom Fabrication Run", status: "on-track", eta: "In production, Day 3 of 5" },
+  { order: "PO-2815, Apex Components", product: "Aluminium Housing x 600", status: "pending", eta: "Awaiting materials confirmation" },
 ];
 
 const dashExceptions = [
-  { agent: "Inventory Agent", message: "Steel rod stock at 8% — reorder triggered, supplier ETA 3 business days", severity: "high" },
-  { agent: "CX Agent", message: "PO-2837 delay notification sent to Consolidated Supply — 2-day push confirmed", severity: "medium" },
-  { agent: "Finance Agent", message: "Invoice overdue 18 days — Apex Components, $12,400 outstanding", severity: "high" },
+  { agent: "Inventory Agent", message: "Steel rod stock at 8%, reorder triggered, supplier ETA 3 business days", severity: "high" },
+  { agent: "CX Agent", message: "PO-2837 delay notification sent to Consolidated Supply, 2-day push confirmed", severity: "medium" },
+  { agent: "Finance Agent", message: "Invoice overdue 18 days, Apex Components, $12,400 outstanding", severity: "high" },
 ];
 
 const dashGovFeed = [
-  { color: "#4ADE80", label: "resolved", message: "Supplier reorder confirmed — steel rod delivery Wednesday", meta: "Inventory Agent — PO-2837 delay contained, PO-2841 unaffected" },
-  { color: "#FBBF24", label: "escalated", message: "PO-2815 materials risk — Apex order at risk of slip beyond Thursday", meta: "Operations Agent — Governing Agent — leadership review required" },
+  { color: "#4ADE80", label: "resolved", message: "Supplier reorder confirmed, steel rod delivery Wednesday", meta: "Inventory Agent, PO-2837 delay contained, PO-2841 unaffected" },
+  { color: "#FBBF24", label: "escalated", message: "PO-2815 materials risk, Apex order at risk of slip beyond Thursday", meta: "Operations Agent, Governing Agent, leadership review required" },
   { color: "#60A5FA", label: "insight", message: "On-time fulfillment up 17 points since production scheduling deployed", meta: "Synthesis: Operations + Finance + CX" },
-  { color: "#A78BFA", label: "sync", message: "Production SOP v2.1 applied — all active orders updated", meta: "Operations Agent — cross-domain update complete" },
+  { color: "#A78BFA", label: "sync", message: "Production SOP v2.1 applied, all active orders updated", meta: "Operations Agent, cross-domain update complete" },
 ];
 
 // ── MINI DASHBOARD COMPONENT ──────────────────────────────────────────────────
@@ -313,7 +313,7 @@ function MiniDashboard({ inView }: { inView: boolean }) {
 
         {/* Footer bar */}
         <div style={{ background: "#020D1F", padding: "8px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS — Manufacturing and Distribution deployment</span>
+          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS: Manufacturing and Distribution deployment</span>
           <span style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "Manrope, sans-serif", fontSize: "10px", fontWeight: 600, color: "#60A5FA" }}>
             <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#4ADE80", boxShadow: "0 0 5px rgba(74,222,153,0.5)" }} />
             All systems operational
@@ -431,7 +431,7 @@ export default function ManufacturingDistribution() {
             </h1>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 400, fontSize: "18px", color: "#374151", lineHeight: 1.75, maxWidth: "640px", margin: "0 auto 16px" }}>
-              Manufacturing and distribution businesses lose margin to production delays, materials shortages, and the absence of real-time visibility from floor to leadership. Quanton OS deploys eight coordinated AI agents that govern the operational layer of your business — so your team focuses on production, not coordination.
+              Manufacturing and distribution businesses lose margin to production delays, materials shortages, and the absence of real-time visibility from floor to leadership. Quanton OS deploys eight coordinated AI agents that govern the operational layer of your business, so your team focuses on production, not coordination.
             </p>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 500, fontSize: "16px", color: "#1F2937", lineHeight: 1.7, marginBottom: "40px" }}>
@@ -452,42 +452,7 @@ export default function ManufacturingDistribution() {
             </div>
           </motion.div>
 
-          {/* ── VIDEO EMBED ── */}
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }}
-            style={{ marginTop: "64px" }}
-          >
-            <div
-              style={{
-                position: "relative",
-                borderRadius: "16px",
-                overflow: "hidden",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
-                aspectRatio: "16 / 9",
-                background: "#000000",
-              }}
-            >
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/r5OfSZdXOmM?rel=0&modestbranding=1"
-                title="Production Delays Are Killing Your Margin. AI Infrastructure Is the Fix | Quanton Labs"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                }}
-              />
-            </div>
-          </motion.div>
-        </div>
+                  </div>
       </section>
 
       {/* ── PAIN POINTS ── */}
@@ -559,7 +524,7 @@ export default function ManufacturingDistribution() {
           <div>
             <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 600, fontSize: "12px", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "16px", ...GRADIENT_TEXT }}>The operational shift</div>
             <h2 style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 38px)", color: "#1F2937", lineHeight: 1.25, marginBottom: "20px" }}>Fewer delays. Protected margin. Full visibility from floor to leadership.</h2>
-            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your operation — before any commitment is made.</p>
+            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your operation, before any commitment is made.</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             {[
@@ -640,7 +605,7 @@ export default function ManufacturingDistribution() {
                   </div>
                   <div>
                     <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "14px", color: "#1F2937", marginBottom: "2px" }}>Operations Director</div>
-                    <div style={{ fontFamily: "Manrope, sans-serif", fontSize: "13px", color: "#9CA3AF" }}>Manufacturing Business — testimonial forthcoming</div>
+                    <div style={{ fontFamily: "Manrope, sans-serif", fontSize: "13px", color: "#9CA3AF" }}>Manufacturing Business, testimonial forthcoming</div>
                   </div>
                 </div>
               </div>
