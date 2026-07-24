@@ -48,7 +48,7 @@ const painPoints = [
     icon: AlertCircle,
     title: "Estimates that never convert to booked projects",
     description:
-      "Inbound leads get a quote and then go silent. Without a structured follow-up system, a significant portion of your pipeline disappears between estimate and decision — revenue that was already earned but never collected.",
+      "Inbound leads get a quote and then go silent. Without a structured follow-up system, a significant portion of your pipeline disappears between estimate and decision, revenue that was already earned but never collected.",
   },
   {
     icon: MapPin,
@@ -76,7 +76,7 @@ const agents = [
   {
     icon: Cpu,
     name: "Operations Agent",
-    tagline: "Scheduling, dispatch, and project tracking — governed.",
+    tagline: "Scheduling, dispatch, and project tracking, governed.",
     description:
       "Technician schedules managed and communicated. Project task assignments tracked from kickoff to completion. SOPs documented and enforced across every project type. Supplier and materials coordination handled without the owner as the single point of contact. Your field operation runs to a consistent standard.",
     automations: [
@@ -106,11 +106,11 @@ const agents = [
     name: "Finance Agent",
     tagline: "Invoices out. Payments in. Books current.",
     description:
-      "Invoices generated on project completion triggers. Outstanding balances tracked and followed up automatically. Expenses categorised without manual entry. Cash flow position visible in real time. You stop chasing payments and start seeing your financial picture clearly.",
+      "Invoices generated on project completion triggers. Outstanding balances tracked and followed up automatically. Expenses categorized without manual entry. Cash flow position visible in real time. You stop chasing payments and start seeing your financial picture clearly.",
     automations: [
       "Invoice generation on project completion",
       "Outstanding balance tracking and follow-up",
-      "Expense categorisation by project",
+      "Expense categorization by project",
       "Cash flow and revenue reporting",
     ],
     color: "linear-gradient(135deg, #7341EA, #8B37EA)",
@@ -135,7 +135,7 @@ const howItWorks = [
     title: "Discovery and Diagnostic",
     duration: "2 to 3 weeks",
     description:
-      "We audit your business across every operational domain — lead management, estimate conversion, scheduling, project delivery, invoicing, and collections. The output is a Diagnostic Report that maps exactly where revenue is leaking and what infrastructure needs to be built. You own that report regardless of what you decide next.",
+      "We audit your business across every operational domain: lead management, estimate conversion, scheduling, project delivery, invoicing, and collections. The output is a Diagnostic Report that maps exactly where revenue is leaking and what infrastructure needs to be built. You own that report regardless of what you decide next.",
     detail: "Fixed-fee engagement. No ongoing commitment at this stage.",
   },
   {
@@ -144,7 +144,7 @@ const howItWorks = [
     title: "Infrastructure Deployment",
     duration: "8 to 16 weeks",
     description:
-      "All eight agents are configured against your specific environment — your CRM, your scheduling platform, your accounting system. The Governing Agent goes live. Your leadership dashboard is built. Follow-up sequences, dispatch workflows, and invoice triggers are tested and governed. Your team is trained on what the system handles and what requires their decision.",
+      "All eight agents are configured against your specific environment: your CRM, your scheduling platform, your accounting system. The Governing Agent goes live. Your leadership dashboard is built. Follow-up sequences, dispatch workflows, and invoice triggers are tested and governed. Your team is trained on what the system handles and what requires their decision.",
     detail: "Fixed investment. You own all deployed infrastructure on completion.",
   },
   {
@@ -153,7 +153,7 @@ const howItWorks = [
     title: "Managed Services",
     duration: "Ongoing",
     description:
-      "Quanton Labs operates the system on your behalf. Agent hosting, API costs, system monitoring, workflow optimisation, and quarterly strategic reviews are all included. Your business keeps running at full capacity. We surface the exceptions that need your attention and handle everything that does not.",
+      "Quanton Labs operates the system on your behalf. Agent hosting, API costs, system monitoring, workflow optimization, and quarterly strategic reviews are all included. Your business keeps running at full capacity. We surface the exceptions that need your attention and handle everything that does not.",
     detail: "Fixed monthly retainer. Six-month minimum, then month-to-month.",
   },
 ];
@@ -170,21 +170,21 @@ const dashMetrics = [
 const dashProjects = [
   { client: "Harmon Residence", job: "HVAC Replacement", status: "on-track", stage: "Day 2 of 3" },
   { client: "Clearview Rentals", job: "Electrical Panel Upgrade", status: "on-track", stage: "Milestone 2 of 4" },
-  { client: "Teller Commercial", job: "Roof Inspection + Repair", status: "attention", stage: "Estimate Sent — Day 9" },
-  { client: "Rodriguez Property", job: "Plumbing Rough-In", status: "pending", stage: "Scheduled — Thursday" },
+  { client: "Teller Commercial", job: "Roof Inspection + Repair", status: "attention", stage: "Estimate Sent, Day 9" },
+  { client: "Rodriguez Property", job: "Plumbing Rough-In", status: "pending", stage: "Scheduled, Thursday" },
 ];
 
 const dashExceptions = [
-  { agent: "Sales Agent", message: "Estimate follow-up stalled — Teller Commercial, no response in 9 days", severity: "high" },
-  { agent: "Finance Agent", message: "Invoice overdue 14 days — Clearview Rentals, $3,400 outstanding", severity: "high" },
-  { agent: "Operations Agent", message: "Tech cert expiring in 10 days — M. Reyes, licensed electrician renewal", severity: "medium" },
+  { agent: "Sales Agent", message: "Estimate follow-up stalled, Teller Commercial, no response in 9 days", severity: "high" },
+  { agent: "Finance Agent", message: "Invoice overdue 14 days, Clearview Rentals, $3,400 outstanding", severity: "high" },
+  { agent: "Operations Agent", message: "Tech cert expiring in 10 days, M. Reyes, licensed electrician renewal", severity: "medium" },
 ];
 
 const dashGovFeed = [
-  { color: "#4ADE80", label: "resolved", message: "Invoice sent — Harmon Residence, project completion triggered", meta: "Finance Agent — automated on sign-off" },
-  { color: "#F87171", label: "urgent", message: "Estimate aging — Teller Commercial at risk of going cold", meta: "Sales Agent — Governing Agent — direct follow-up queued" },
+  { color: "#4ADE80", label: "resolved", message: "Invoice sent, Harmon Residence, project completion triggered", meta: "Finance Agent, automated on sign-off" },
+  { color: "#F87171", label: "urgent", message: "Estimate aging, Teller Commercial at risk of going cold", meta: "Sales Agent, Governing Agent, direct follow-up queued" },
   { color: "#60A5FA", label: "insight", message: "Estimate conversion up 18% since follow-up sequences deployed", meta: "Synthesis: Sales + Finance" },
-  { color: "#A78BFA", label: "sync", message: "Dispatch SOP v1.4 applied — all active projects updated", meta: "Operations Agent — cross-domain update complete" },
+  { color: "#A78BFA", label: "sync", message: "Dispatch SOP v1.4 applied, all active projects updated", meta: "Operations Agent, cross-domain update complete" },
 ];
 
 // ── MINI DASHBOARD COMPONENT ──────────────────────────────────────────────────
@@ -313,7 +313,7 @@ function MiniDashboard({ inView }: { inView: boolean }) {
 
         {/* Footer bar */}
         <div style={{ background: "#020D1F", padding: "8px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS — Home Services deployment</span>
+          <span style={{ fontFamily: "Manrope, sans-serif", fontSize: "10px", color: "rgba(255,255,255,0.22)" }}>Quanton OS: Home Services deployment</span>
           <span style={{ display: "flex", alignItems: "center", gap: "6px", fontFamily: "Manrope, sans-serif", fontSize: "10px", fontWeight: 600, color: "#60A5FA" }}>
             <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#4ADE80", boxShadow: "0 0 5px rgba(74,222,153,0.5)" }} />
             All systems operational
@@ -431,7 +431,7 @@ export default function HomeServices() {
             </h1>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 400, fontSize: "18px", color: "#374151", lineHeight: 1.75, maxWidth: "640px", margin: "0 auto 16px" }}>
-              Home services businesses lose revenue to unconverted estimates, scheduling gaps, and the absence of governed field-to-office processes. Quanton OS deploys eight coordinated AI agents that run the operational layer of your business — so you focus on delivering quality work, not managing the business around it.
+              Home services businesses lose revenue to unconverted estimates, scheduling gaps, and the absence of governed field-to-office processes. Quanton OS deploys eight coordinated AI agents that run the operational layer of your business, so you focus on delivering quality work, not managing the business around it.
             </p>
 
             <p style={{ fontFamily: "Manrope, sans-serif", fontWeight: 500, fontSize: "16px", color: "#1F2937", lineHeight: 1.7, marginBottom: "40px" }}>
@@ -452,41 +452,6 @@ export default function HomeServices() {
             </div>
           </motion.div>
 
-          {/* ── VIDEO EMBED ── */}
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.25, ease: "easeOut" }}
-            style={{ marginTop: "64px" }}
-          >
-            <div
-              style={{
-                position: "relative",
-                borderRadius: "16px",
-                overflow: "hidden",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
-                aspectRatio: "16 / 9",
-                background: "#000000",
-              }}
-            >
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/ObfcY2xOwbM?rel=0&modestbranding=1"
-                title="Why Home Services Businesses Lose Revenue to Their Own Operations | Quanton Labs"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                }}
-              />
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -559,7 +524,7 @@ export default function HomeServices() {
           <div>
             <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 600, fontSize: "12px", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "16px", ...GRADIENT_TEXT }}>The operational shift</div>
             <h2 style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "clamp(26px, 3.5vw, 38px)", color: "#1F2937", lineHeight: 1.25, marginBottom: "20px" }}>More estimates closed. Faster payments. Owner time back.</h2>
-            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your business — before any commitment is made.</p>
+            <p style={{ fontFamily: "Manrope, sans-serif", fontSize: "15px", color: "#6B7280", lineHeight: 1.75 }}>The Phase 1 Discovery produces a Pre-sale ROI Estimate that quantifies value leakage across five categories specific to your business, before any commitment is made.</p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
             {[
@@ -640,7 +605,7 @@ export default function HomeServices() {
                   </div>
                   <div>
                     <div style={{ fontFamily: "Manrope, sans-serif", fontWeight: 700, fontSize: "14px", color: "#1F2937", marginBottom: "2px" }}>Business Owner</div>
-                    <div style={{ fontFamily: "Manrope, sans-serif", fontSize: "13px", color: "#9CA3AF" }}>Home Services Business — testimonial forthcoming</div>
+                    <div style={{ fontFamily: "Manrope, sans-serif", fontSize: "13px", color: "#9CA3AF" }}>Home Services Business, testimonial forthcoming</div>
                   </div>
                 </div>
               </div>

@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
-
 const GRADIENT = "linear-gradient(to right, #2B60EB, #4655EB, #584DEB, #7341EA, #8B37EA)";
 
 const solutions = [
@@ -58,6 +57,38 @@ export default function Navbar({ isScrolled }: { isScrolled: boolean }) {
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
+
+            <Link
+              href="/about"
+              style={{
+                fontFamily: "Manrope, sans-serif",
+                fontSize: "14px",
+                fontWeight: 500,
+                color: "rgba(255,255,255,0.70)",
+                textDecoration: "none",
+                transition: "color 0.2s ease",
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = "#ffffff"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.70)"; }}
+            >
+              About
+            </Link>
+
+            <Link
+              href="/case-studies"
+              style={{
+                fontFamily: "Manrope, sans-serif",
+                fontSize: "14px",
+                fontWeight: 500,
+                color: "rgba(255,255,255,0.70)",
+                textDecoration: "none",
+                transition: "color 0.2s ease",
+              }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = "#ffffff"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.70)"; }}
+            >
+              Case Studies
+            </Link>
 
             {/* Solutions dropdown */}
             <div ref={dropdownRef} style={{ position: "relative" }}>

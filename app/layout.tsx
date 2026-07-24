@@ -3,6 +3,10 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import Providers from "./providers";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { SessionProvider } from "next-auth/react";
+import "@/lib/dns";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -35,7 +39,7 @@ export const metadata: Metadata = {
       { rel: "mask-icon", url: "/images/assets/QL favicon transparent.svg" },
     ],
   },
-openGraph: {
+  openGraph: {
     title: "Quanton OS | AI Operating System for Growth-Stage Businesses",
     description:
       "Eight coordinated AI agents. One governing intelligence layer. Complete business infrastructure deployed on your existing systems without migration.",
@@ -154,7 +158,11 @@ export default function RootLayout({
       </head>
       <body className={[manrope.variable, "antialiased"].join(" ")}>
         <Analytics />
-        {children}
+        <Providers>
+          <TooltipProvider>
+            {children}
+          </TooltipProvider>
+        </Providers>
       </body>
     </html>
   );
